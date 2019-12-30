@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SecondViewControllerDelgate: class {
+protocol SignUpViewControllerDelgate: class {
     func goToFirstViewController()
 }
 
-class SecondViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
-    weak var delegate: SecondViewControllerDelgate?
+    weak var delegate: SignUpViewControllerDelgate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

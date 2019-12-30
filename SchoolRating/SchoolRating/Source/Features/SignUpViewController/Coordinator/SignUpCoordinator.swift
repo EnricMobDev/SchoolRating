@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SecondCoordinator: Coordinator {
+final class SignUpCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     unowned var navigationController: UINavigationController
     
@@ -17,16 +17,16 @@ final class SecondCoordinator: Coordinator {
     }
     
     func start() {
-        let secondViewController = SecondViewController()
-        secondViewController.delegate = self
-        navigationController.viewControllers = [secondViewController]
+        let signUpViewController = SignUpViewController()
+        signUpViewController.delegate = self
+        navigationController.viewControllers = [signUpViewController]
     }
 }
 
-extension SecondCoordinator: SecondViewControllerDelgate {
+extension SignUpCoordinator: SignUpViewControllerDelgate {
     func goToFirstViewController() {
-        let firstVC = FirstCoordinator(navigationController: navigationController)
-        childCoordinators.append(firstVC)
-        firstVC.start()
+        let loginVC = LoginViewControllerCoordinator(navigationController: navigationController)
+        childCoordinators.append(loginVC)
+        loginVC.start()
     }
 }
