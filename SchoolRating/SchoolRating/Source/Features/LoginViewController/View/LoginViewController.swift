@@ -14,14 +14,18 @@ protocol LoginViewControllerDelegate: class {
     func navigateToSignInViewController()
 }
 
-
 class LoginViewController: UIViewController {
     
     weak var delegate: LoginViewControllerDelegate?
+    
+    //IBOutlet
+    @IBOutlet weak var schoolImage: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        schoolImage.image = R.image.school()
     }
     
     //Mark: IBActions

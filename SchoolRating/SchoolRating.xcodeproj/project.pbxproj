@@ -10,6 +10,9 @@
 		4B32C78E6863AEA74F0C2EBE /* Pods_SchoolRating_SchoolRatingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F513B44F246791BAC18CAEAA /* Pods_SchoolRating_SchoolRatingUITests.framework */; };
 		5479839ED4BC56B1F9E56B26 /* Pods_SchoolRatingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BEFF4E3E20579F37A0720B /* Pods_SchoolRatingTests.framework */; };
 		AE7578BE6F827EE9E95A3F28 /* Pods_SchoolRating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38AEE65783BD2027825D77 /* Pods_SchoolRating.framework */; };
+		C51FAC5D23BFBD35008AAFD9 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FAC5C23BFBD35008AAFD9 /* TabBarCoordinator.swift */; };
+		C51FAC6123BFBD73008AAFD9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FAC5F23BFBD73008AAFD9 /* TabBarViewController.swift */; };
+		C51FAC6223BFBD73008AAFD9 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51FAC6023BFBD73008AAFD9 /* TabBarViewController.xib */; };
 		C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530B9F723AEE92200873610 /* AppDelegate.swift */; };
 		C530BA0123AEE92500873610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0023AEE92500873610 /* Assets.xcassets */; };
 		C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0223AEE92500873610 /* LaunchScreen.storyboard */; };
@@ -22,9 +25,13 @@
 		C530BA3E23AEEFFB00873610 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3D23AEEFFB00873610 /* SignUpCoordinator.swift */; };
 		C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3F23AEF07900873610 /* SignUpViewController.swift */; };
 		C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4023AEF07900873610 /* SignUpViewController.xib */; };
-		C530BA4A23B80A8100873610 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA4923B80A8100873610 /* TabBarCoordinator.swift */; };
+		C530BA4A23B80A8100873610 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA4923B80A8100873610 /* HomeCoordinator.swift */; };
 		C530BA4E23BA94AB00873610 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA4C23BA94AB00873610 /* HomeViewController.swift */; };
 		C530BA4F23BA94AB00873610 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4D23BA94AB00873610 /* HomeViewController.xib */; };
+		C565475723BFC18600BE446C /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475623BFC18600BE446C /* DetailViewCoordinator.swift */; };
+		C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475823BFC1D100BE446C /* DetailViewController.swift */; };
+		C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C565475923BFC1D100BE446C /* DetailViewController.xib */; };
+		C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585112A23E0A4EE008600F0 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,9 @@
 		7A9F940C0CB39D69E99C137C /* Pods-SchoolRatingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRatingTests.release.xcconfig"; path = "Target Support Files/Pods-SchoolRatingTests/Pods-SchoolRatingTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DC4964BD56E98674501F0BC /* Pods-SchoolRating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRating.release.xcconfig"; path = "Target Support Files/Pods-SchoolRating/Pods-SchoolRating.release.xcconfig"; sourceTree = "<group>"; };
 		AE3F90D077D0F979FC8DD8D3 /* Pods-SchoolRating-SchoolRatingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRating-SchoolRatingUITests.release.xcconfig"; path = "Target Support Files/Pods-SchoolRating-SchoolRatingUITests/Pods-SchoolRating-SchoolRatingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C51FAC5C23BFBD35008AAFD9 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		C51FAC5F23BFBD73008AAFD9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C51FAC6023BFBD73008AAFD9 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		C530B9F423AEE92200873610 /* SchoolRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C530B9F723AEE92200873610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C530BA0023AEE92500873610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,9 +80,13 @@
 		C530BA3D23AEEFFB00873610 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		C530BA3F23AEF07900873610 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C530BA4023AEF07900873610 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		C530BA4923B80A8100873610 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		C530BA4923B80A8100873610 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		C530BA4C23BA94AB00873610 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C530BA4D23BA94AB00873610 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C565475623BFC18600BE446C /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		C565475823BFC1D100BE446C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C565475923BFC1D100BE446C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C585112A23E0A4EE008600F0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C685644EBCBB90E67CC161C0 /* Pods-SchoolRating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRating.debug.xcconfig"; path = "Target Support Files/Pods-SchoolRating/Pods-SchoolRating.debug.xcconfig"; sourceTree = "<group>"; };
 		F513B44F246791BAC18CAEAA /* Pods_SchoolRating_SchoolRatingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolRating_SchoolRatingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +140,32 @@
 				18BEFF4E3E20579F37A0720B /* Pods_SchoolRatingTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C51FAC5A23BFBCF1008AAFD9 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C51FAC5B23BFBD13008AAFD9 /* Coordinator */,
+				C51FAC5E23BFBD49008AAFD9 /* View */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		C51FAC5B23BFBD13008AAFD9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C51FAC5C23BFBD35008AAFD9 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C51FAC5E23BFBD49008AAFD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C51FAC5F23BFBD73008AAFD9 /* TabBarViewController.swift */,
+				C51FAC6023BFBD73008AAFD9 /* TabBarViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C530B9EB23AEE92200873610 = {
@@ -183,6 +223,7 @@
 		C530BA2923AEE9C600873610 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C585112123E0A172008600F0 /* Generated */,
 				C530BA2C23AEE9EB00873610 /* Coordinator */,
 				C530BA2A23AEE9CE00873610 /* Features */,
 			);
@@ -194,7 +235,9 @@
 			children = (
 				C530BA2F23AEEA4300873610 /* LoginViewController */,
 				C530BA3023AEEA5200873610 /* SignUpViewController */,
+				C51FAC5A23BFBCF1008AAFD9 /* TabBarController */,
 				C530BA4323B8092D00873610 /* HomeViewController */,
+				C565475323BFC14400BE446C /* DetailViewController */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -279,7 +322,7 @@
 		C530BA4823B80A6B00873610 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C530BA4923B80A8100873610 /* TabBarCoordinator.swift */,
+				C530BA4923B80A8100873610 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -293,6 +336,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C565475323BFC14400BE446C /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C565475523BFC16600BE446C /* Coordinator */,
+				C565475423BFC15900BE446C /* View */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		C565475423BFC15900BE446C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C565475823BFC1D100BE446C /* DetailViewController.swift */,
+				C565475923BFC1D100BE446C /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C565475523BFC16600BE446C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C565475623BFC18600BE446C /* DetailViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C585112123E0A172008600F0 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C585112A23E0A4EE008600F0 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,6 +378,7 @@
 			buildConfigurationList = C530BA1E23AEE92500873610 /* Build configuration list for PBXNativeTarget "SchoolRating" */;
 			buildPhases = (
 				ACC63DE26D85EED995736F69 /* [CP] Check Pods Manifest.lock */,
+				C585111C23E08AE8008600F0 /* R.Swift  */,
 				C530B9F023AEE92200873610 /* Sources */,
 				C530B9F123AEE92200873610 /* Frameworks */,
 				C530B9F223AEE92200873610 /* Resources */,
@@ -404,8 +482,10 @@
 			files = (
 				C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */,
 				C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */,
+				C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */,
 				C530BA4F23BA94AB00873610 /* HomeViewController.xib in Resources */,
 				C530BA3823AEEBAD00873610 /* LoginViewController.xib in Resources */,
+				C51FAC6223BFBD73008AAFD9 /* TabBarViewController.xib in Resources */,
 				C530BA0123AEE92500873610 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +607,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C585111C23E08AE8008600F0 /* R.Swift  */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R.Swift ";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/SchoolRating/Source/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SchoolRating/Source/Generated/R.generated.swift\"\n\n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -536,11 +636,16 @@
 			files = (
 				C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */,
 				C530BA3A23AEEBE200873610 /* LoginViewControllerCoordinator.swift in Sources */,
-				C530BA4A23B80A8100873610 /* TabBarCoordinator.swift in Sources */,
+				C565475723BFC18600BE446C /* DetailViewCoordinator.swift in Sources */,
+				C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */,
+				C530BA4A23B80A8100873610 /* HomeCoordinator.swift in Sources */,
 				C530BA4E23BA94AB00873610 /* HomeViewController.swift in Sources */,
+				C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */,
 				C530BA2E23AEEA0100873610 /* Coordinator.swift in Sources */,
+				C51FAC5D23BFBD35008AAFD9 /* TabBarCoordinator.swift in Sources */,
 				C530BA3623AEEA8F00873610 /* LoginViewController.swift in Sources */,
 				C530BA3E23AEEFFB00873610 /* SignUpCoordinator.swift in Sources */,
+				C51FAC6123BFBD73008AAFD9 /* TabBarViewController.swift in Sources */,
 				C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,7 +743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -692,7 +797,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -749,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU4SSYH2B5;
 				INFOPLIST_FILE = SchoolRatingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -772,7 +877,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU4SSYH2B5;
 				INFOPLIST_FILE = SchoolRatingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

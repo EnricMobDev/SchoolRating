@@ -17,7 +17,7 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let tabBarViewController = HomeViewController()
-        navigationController.viewControllers = [tabBarViewController]
+        let homeViewController = HomeViewController()
+        navigationController.viewControllers = [homeViewController]
     }
 }

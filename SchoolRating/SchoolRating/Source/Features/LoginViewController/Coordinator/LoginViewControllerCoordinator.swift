@@ -32,9 +32,9 @@ extension LoginViewControllerCoordinator: LoginViewControllerDelegate {
     }
     
     func navigateToSignInViewController() {
-        let homeViewController = HomeCoordinator(navigationController: navigationController)
-        childCoordinators.append(homeViewController)
-        homeViewController.start()
+        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController)
+        childCoordinators.append(tabBarCoordinator)
+        tabBarCoordinator.start()
     }
     
 }
