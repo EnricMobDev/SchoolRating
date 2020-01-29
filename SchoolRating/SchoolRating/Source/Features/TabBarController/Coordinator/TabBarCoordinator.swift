@@ -15,18 +15,6 @@ final class TabBarCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        
-        let firstViewController = HomeCoordinator(navigationController: navigationController)
-        
-        let secondViewController = DetailViewCoordinator(navigationController: navigationController)
-        
-        childCoordinators.append(firstViewController)
-        childCoordinators.append(secondViewController)
-//        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
-        
-//        childCoordinators = [firstViewController, secondViewController]
-        
-//        viewControllers = tabBarList
     }
     
     func start() {

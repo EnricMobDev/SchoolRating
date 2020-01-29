@@ -25,13 +25,11 @@
 		C530BA3E23AEEFFB00873610 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3D23AEEFFB00873610 /* SignUpCoordinator.swift */; };
 		C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3F23AEF07900873610 /* SignUpViewController.swift */; };
 		C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4023AEF07900873610 /* SignUpViewController.xib */; };
-		C530BA4A23B80A8100873610 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA4923B80A8100873610 /* HomeCoordinator.swift */; };
-		C530BA4E23BA94AB00873610 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA4C23BA94AB00873610 /* HomeViewController.swift */; };
-		C530BA4F23BA94AB00873610 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4D23BA94AB00873610 /* HomeViewController.xib */; };
-		C565475723BFC18600BE446C /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475623BFC18600BE446C /* DetailViewCoordinator.swift */; };
 		C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475823BFC1D100BE446C /* DetailViewController.swift */; };
 		C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C565475923BFC1D100BE446C /* DetailViewController.xib */; };
 		C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585112A23E0A4EE008600F0 /* R.generated.swift */; };
+		C58DD44523E1C3C0000B3C56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DD44323E1C3C0000B3C56 /* HomeViewController.swift */; };
+		C58DD44623E1C3C0000B3C56 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58DD44423E1C3C0000B3C56 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,13 +78,11 @@
 		C530BA3D23AEEFFB00873610 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		C530BA3F23AEF07900873610 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C530BA4023AEF07900873610 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		C530BA4923B80A8100873610 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		C530BA4C23BA94AB00873610 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C530BA4D23BA94AB00873610 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		C565475623BFC18600BE446C /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
 		C565475823BFC1D100BE446C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C565475923BFC1D100BE446C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		C585112A23E0A4EE008600F0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		C58DD44323E1C3C0000B3C56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C58DD44423E1C3C0000B3C56 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C685644EBCBB90E67CC161C0 /* Pods-SchoolRating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRating.debug.xcconfig"; path = "Target Support Files/Pods-SchoolRating/Pods-SchoolRating.debug.xcconfig"; sourceTree = "<group>"; };
 		F513B44F246791BAC18CAEAA /* Pods_SchoolRating_SchoolRatingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolRating_SchoolRatingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C51FAC5B23BFBD13008AAFD9 /* Coordinator */,
-				C51FAC5E23BFBD49008AAFD9 /* View */,
+				C51FAC5E23BFBD49008AAFD9 /* Views */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -159,13 +155,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		C51FAC5E23BFBD49008AAFD9 /* View */ = {
+		C51FAC5E23BFBD49008AAFD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C51FAC5F23BFBD73008AAFD9 /* TabBarViewController.swift */,
-				C51FAC6023BFBD73008AAFD9 /* TabBarViewController.xib */,
+				C58DD44123E1C359000B3C56 /* TabBar */,
+				C58DD44223E1C3AC000B3C56 /* Home */,
+				C565475423BFC15900BE446C /* Detail */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C530B9EB23AEE92200873610 = {
@@ -236,8 +233,6 @@
 				C530BA2F23AEEA4300873610 /* LoginViewController */,
 				C530BA3023AEEA5200873610 /* SignUpViewController */,
 				C51FAC5A23BFBCF1008AAFD9 /* TabBarController */,
-				C530BA4323B8092D00873610 /* HomeViewController */,
-				C565475323BFC14400BE446C /* DetailViewController */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -310,56 +305,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C530BA4323B8092D00873610 /* HomeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C530BA4823B80A6B00873610 /* Coordinator */,
-				C530BA4B23BA948E00873610 /* View */,
-			);
-			path = HomeViewController;
-			sourceTree = "<group>";
-		};
-		C530BA4823B80A6B00873610 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				C530BA4923B80A8100873610 /* HomeCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		C530BA4B23BA948E00873610 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C530BA4C23BA94AB00873610 /* HomeViewController.swift */,
-				C530BA4D23BA94AB00873610 /* HomeViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C565475323BFC14400BE446C /* DetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C565475523BFC16600BE446C /* Coordinator */,
-				C565475423BFC15900BE446C /* View */,
-			);
-			path = DetailViewController;
-			sourceTree = "<group>";
-		};
-		C565475423BFC15900BE446C /* View */ = {
+		C565475423BFC15900BE446C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				C565475823BFC1D100BE446C /* DetailViewController.swift */,
 				C565475923BFC1D100BE446C /* DetailViewController.xib */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C565475523BFC16600BE446C /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				C565475623BFC18600BE446C /* DetailViewCoordinator.swift */,
-			);
-			path = Coordinator;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		C585112123E0A172008600F0 /* Generated */ = {
@@ -368,6 +320,24 @@
 				C585112A23E0A4EE008600F0 /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		C58DD44123E1C359000B3C56 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C51FAC5F23BFBD73008AAFD9 /* TabBarViewController.swift */,
+				C51FAC6023BFBD73008AAFD9 /* TabBarViewController.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C58DD44223E1C3AC000B3C56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C58DD44323E1C3C0000B3C56 /* HomeViewController.swift */,
+				C58DD44423E1C3C0000B3C56 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,9 +453,9 @@
 				C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */,
 				C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */,
 				C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */,
-				C530BA4F23BA94AB00873610 /* HomeViewController.xib in Resources */,
 				C530BA3823AEEBAD00873610 /* LoginViewController.xib in Resources */,
 				C51FAC6223BFBD73008AAFD9 /* TabBarViewController.xib in Resources */,
+				C58DD44623E1C3C0000B3C56 /* HomeViewController.xib in Resources */,
 				C530BA0123AEE92500873610 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,14 +606,12 @@
 			files = (
 				C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */,
 				C530BA3A23AEEBE200873610 /* LoginViewControllerCoordinator.swift in Sources */,
-				C565475723BFC18600BE446C /* DetailViewCoordinator.swift in Sources */,
 				C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */,
-				C530BA4A23B80A8100873610 /* HomeCoordinator.swift in Sources */,
-				C530BA4E23BA94AB00873610 /* HomeViewController.swift in Sources */,
 				C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */,
 				C530BA2E23AEEA0100873610 /* Coordinator.swift in Sources */,
 				C51FAC5D23BFBD35008AAFD9 /* TabBarCoordinator.swift in Sources */,
 				C530BA3623AEEA8F00873610 /* LoginViewController.swift in Sources */,
+				C58DD44523E1C3C0000B3C56 /* HomeViewController.swift in Sources */,
 				C530BA3E23AEEFFB00873610 /* SignUpCoordinator.swift in Sources */,
 				C51FAC6123BFBD73008AAFD9 /* TabBarViewController.swift in Sources */,
 				C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */,
