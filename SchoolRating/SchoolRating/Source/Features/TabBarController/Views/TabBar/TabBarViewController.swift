@@ -8,12 +8,12 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController {
+final class TabBarViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createTabBarItems()
+        //createTabBarItems()
     }
     
     private func createTabBarItems() {
@@ -25,8 +25,8 @@ final class TabBarViewController: UITabBarController {
         
         secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
         
-        let tabBarList = [firstViewController, secondViewController]
-        
-        viewControllers = tabBarList
+//            let tabBarList = [firstViewController, secondViewController]
+//            
+//            viewControllers = tabBarList
     }
 }

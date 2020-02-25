@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="SchoolRating" customModuleProvider="target">
             <connections>
+                <outlet property="goToDetailViewController" destination="gzL-3a-QPa" id="Ykm-PG-OtG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,10 +25,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-3a-QPa">
+                    <rect key="frame" x="149" y="377.5" width="116" height="30"/>
+                    <state key="normal" title="Go to detail View"/>
+                    <connections>
+                        <action selector="goToDetailView:" destination="-1" eventType="touchUpInside" id="RbM-pE-6YK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="g4E-Fl-LdU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Azv-jg-Cm3"/>
+                <constraint firstItem="gzL-3a-QPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HeE-k6-Uaj"/>
+                <constraint firstItem="g4E-Fl-LdU" firstAttribute="top" secondItem="gzL-3a-QPa" secondAttribute="bottom" constant="30" id="In9-y8-Xh8"/>
                 <constraint firstItem="g4E-Fl-LdU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yRF-Zg-5oO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

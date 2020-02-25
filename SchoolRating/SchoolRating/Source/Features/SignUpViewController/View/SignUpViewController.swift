@@ -8,13 +8,7 @@
 
 import UIKit
 
-protocol SignUpViewControllerDelgate: class {
-    func goToFirstViewController()
-}
-
-class SignUpViewController: UIViewController {
-
-    weak var delegate: SignUpViewControllerDelgate?
+class SignUpViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +16,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func backToFirstVC(_ sender: Any) {
-        delegate?.goToFirstViewController()
+        coordinator?.navigateToSignInViewController()
     }
     
 }

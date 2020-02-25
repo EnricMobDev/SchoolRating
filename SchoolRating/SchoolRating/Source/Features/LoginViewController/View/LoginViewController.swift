@@ -8,20 +8,11 @@
 
 import UIKit
 
-
-protocol LoginViewControllerDelegate: class {
-    func navigateToSignUpViewController()
-    func navigateToSignInViewController()
-}
-
-class LoginViewController: UIViewController {
-    
-    weak var delegate: LoginViewControllerDelegate?
-    
+class LoginViewController: BaseViewController {
+        
     //IBOutlet
     @IBOutlet weak var schoolImage: UIImageView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -30,10 +21,10 @@ class LoginViewController: UIViewController {
     
     //Mark: IBActions
     @IBAction func signUp(_ sender: Any) {
-        delegate?.navigateToSignUpViewController()
+        coordinator?.navigateToSignUpViewController()
     }
     
     @IBAction func signIn(_ sender: Any) {
-        delegate?.navigateToSignInViewController()
+        coordinator?.navigateToSignInViewController()
     }
 }

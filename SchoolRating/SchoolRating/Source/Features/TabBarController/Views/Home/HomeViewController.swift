@@ -8,11 +8,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
+    @IBOutlet var goToDetailViewController: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func goToDetailView(_ sender: Any) {
+        coordinator?.goToDetailViewcontroller()
+    }
+    
+    
 
 }
