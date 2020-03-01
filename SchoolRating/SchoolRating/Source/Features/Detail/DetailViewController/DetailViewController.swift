@@ -15,4 +15,10 @@ class DetailViewController: BaseViewController {
         
         title = "Detail ViewController"
     }
+    
+    
+    @IBAction func goToRootView(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true   ) 
+    }
+    
 }

@@ -10,21 +10,35 @@ import UIKit
 
 class LoginViewController: BaseViewController {
         
-    //IBOutlet
+    // MARK: - Properties
+    private let viewModel: LoginViewModelProtocol
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var schoolImage: UIImageView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         schoolImage.image = R.image.school()
     }
     
-    //Mark: IBActions
+    init(viewModel: LoginViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - IBActions
     @IBAction func signUp(_ sender: Any) {
-        coordinator?.navigateToSignUpViewController()
+        
     }
     
     @IBAction func signIn(_ sender: Any) {
-        coordinator?.navigateToSignInViewController()
+        //coordinator?.navigateToSignInViewController()
     }
 }

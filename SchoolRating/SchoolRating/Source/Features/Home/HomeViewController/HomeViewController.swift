@@ -17,7 +17,7 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func goToDetailView(_ sender: Any) {
-        coordinator?.goToDetailViewcontroller()
+//        coordinator?.goToDetailViewcontroller()
     }
     
     

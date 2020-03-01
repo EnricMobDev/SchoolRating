@@ -29,7 +29,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `DetailViewController`.
     static let detailViewController = _R.nib._DetailViewController()
@@ -39,8 +39,6 @@ struct R: Rswift.Validatable {
     static let loginViewController = _R.nib._LoginViewController()
     /// Nib `SignUpViewController`.
     static let signUpViewController = _R.nib._SignUpViewController()
-    /// Nib `TabBarViewController`.
-    static let tabBarViewController = _R.nib._TabBarViewController()
     
     /// `UINib(name: "DetailViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.detailViewController) instead")
@@ -66,12 +64,6 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.signUpViewController)
     }
     
-    /// `UINib(name: "TabBarViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.tabBarViewController) instead")
-    static func tabBarViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.tabBarViewController)
-    }
-    
     static func detailViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.detailViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
@@ -86,10 +78,6 @@ struct R: Rswift.Validatable {
     
     static func signUpViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.signUpViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-    
-    static func tabBarViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TabBarViewController? {
-      return R.nib.tabBarViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TabBarViewController
     }
     
     fileprivate init() {}
@@ -177,17 +165,6 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct _TabBarViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "TabBarViewController"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TabBarViewController? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TabBarViewController
       }
       
       fileprivate init() {}
