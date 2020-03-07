@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
         
     // MARK: - Properties
     private let viewModel: LoginViewModelProtocol
@@ -20,9 +20,9 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        schoolImage.image = R.image.school()
     }
     
+    // MARK: - Initializers
     init(viewModel: LoginViewModelProtocol) {
         self.viewModel = viewModel
         
@@ -35,10 +35,10 @@ class LoginViewController: BaseViewController {
     
     //MARK: - IBActions
     @IBAction func signUp(_ sender: Any) {
-        
+        viewModel.didSelect()
     }
     
     @IBAction func signIn(_ sender: Any) {
-        //coordinator?.navigateToSignInViewController()
+        viewModel.showFlights()
     }
 }

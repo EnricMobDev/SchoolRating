@@ -13,12 +13,14 @@ final class CoreAssembly {
     // MARK: - Properties
     private let navigationController: UINavigationController
     
-    // MARK: - Variables
-    private(set) lazy var loginAssembly = LoginAssembly()
+    private(set) lazy var signUpAssembly = SignUpAssembly(navigationController: navigationController)
+    private(set) lazy var homeAssembly = HomeAssembly(navigationController: navigationController)
+    
+    private(set) lazy var loginAssembly = LoginAssembly(signUpAssembly: signUpAssembly,
+                                                        homeAssembly: homeAssembly)
     
     // MARK: - Initializers
     public init(navigationController: UINavigationController) {
-
         self.navigationController = navigationController
     }
 }

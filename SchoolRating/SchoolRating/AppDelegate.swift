@@ -13,13 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Properties
     var window: UIWindow?
-    //var coordinator: AppCoordinator?
     let appAssembly = AppAssembly()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //startCoordinator()
+        //startCoordinator()    
         startAppAssembly()
         return true
+        
+        
     }
     
     private func startAppAssembly() {
@@ -31,16 +32,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appAssembly.window.rootViewController = appAssembly.navigationController
         appAssembly.window.makeKeyAndVisible()
     }
-
-    
-    //Coordinator pattern
-//    private func startCoordinator() {
-//        let nav = UINavigationController()
-//        coordinator = AppCoordinator(navigationController: nav)
-//        coordinator?.start()
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = nav
-//        window?.makeKeyAndVisible()
-//    }
 }
 

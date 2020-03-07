@@ -11,9 +11,14 @@ import UIKit
 final class LoginAssembly {
     
     // MARK: - Properties
+    private let signUpAssembly: SignUpAssembly
+    private let homeAssembly: HomeAssembly
     
     // MARK: - Initializers
-    init(){}
+    init(signUpAssembly: SignUpAssembly, homeAssembly: HomeAssembly) {
+        self.signUpAssembly = signUpAssembly
+        self.homeAssembly = homeAssembly
+    }
     
     // MARK: - Public Methods
     public func viewController() -> UIViewController {
@@ -22,6 +27,7 @@ final class LoginAssembly {
     
     // MARK: - Internal Methods
     private func viewModel() -> LoginViewModelProtocol {
-        return LoginViewModel()
+        return LoginViewModel(signUpAssembly: signUpAssembly.navigateToSignUpViewController(),
+                              homeAssembly: homeAssembly.navigateToHomeViewController())
     }
 }

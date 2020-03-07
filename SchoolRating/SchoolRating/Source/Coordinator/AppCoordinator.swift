@@ -8,44 +8,36 @@
 
 import UIKit
 
-///Example of coordinator pattern
-
 protocol CoordinatorProtocol {
     var childCoordinators: [CoordinatorProtocol] { get set }
-    var navigationController: UINavigationController { get set }    
+    var navigationController: UINavigationController { get set }
+    func showSignUpViewController()
+    func showHomeViewController()
 }
 
 final class AppCoordinator: CoordinatorProtocol {
+    
+    // MARK: - Properties
     var childCoordinators = [CoordinatorProtocol]()
     var navigationController: UINavigationController
     
+    // MARK: - Initializers
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-//    func start() {
-//        let firstVC = LoginViewController()
-//        firstVC.coordinator = self
-//        navigationController.pushViewController(firstVC, animated: false)
-//    }
+    // MARK: - Navigate Functions
+    func showSignUpViewController() {
+        let signUpViewModel = SignUpViewModel()
+        let signUpCoordinatorVC = SignUpViewController(viewModel: signUpViewModel)
+        signUpCoordinatorVC.coordinator = self
+        navigationController.pushViewController(signUpCoordinatorVC, animated: true)
+    }
     
-//    func navigateToSignUpViewController() {
-//        let signUpViewController = SignUpViewController()
-//        signUpViewController.coordinator = self
-//        navigationController.pushViewController(signUpViewController, animated: false)
-//    }
-//    
-//    func navigateToSignInViewController() {
-//        let tabBarCoordinator = HomeViewController()
-//        tabBarCoordinator.coordinator = self
-//        navigationController.pushViewController(tabBarCoordinator, animated: false)
-//    }
-//    
-//    func goToDetailViewcontroller() {
-//        let detailVC = DetailViewController()
-//        detailVC.coordinator = self
-//        navigationController.pushViewController(detailVC, animated: false)
-//    }
-    
-    
+    func showHomeViewController() {
+        let homeViewModel = HomeViewModel()
+        let homeViewController = HomeViewController(viewModel: homeViewModel)
+        homeViewController.coordinator = self
+        navigationController.pushViewController(homeViewController, animated: true)
+    }
 }

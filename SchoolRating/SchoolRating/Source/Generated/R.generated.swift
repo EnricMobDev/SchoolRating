@@ -16,20 +16,41 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
-    /// Image `school`.
-    static let school = Rswift.ImageResource(bundle: R.hostingBundle, name: "school")
+    /// Image `Arrivals`.
+    static let arrivals = Rswift.ImageResource(bundle: R.hostingBundle, name: "Arrivals")
+    /// Image `Departures`.
+    static let departures = Rswift.ImageResource(bundle: R.hostingBundle, name: "Departures")
+    /// Image `SummaryArrivals`.
+    static let summaryArrivals = Rswift.ImageResource(bundle: R.hostingBundle, name: "SummaryArrivals")
+    /// Image `SummaryDeparture`.
+    static let summaryDeparture = Rswift.ImageResource(bundle: R.hostingBundle, name: "SummaryDeparture")
     
-    /// `UIImage(named: "school", bundle: ..., traitCollection: ...)`
-    static func school(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.school, compatibleWith: traitCollection)
+    /// `UIImage(named: "Arrivals", bundle: ..., traitCollection: ...)`
+    static func arrivals(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.arrivals, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Departures", bundle: ..., traitCollection: ...)`
+    static func departures(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.departures, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "SummaryArrivals", bundle: ..., traitCollection: ...)`
+    static func summaryArrivals(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.summaryArrivals, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "SummaryDeparture", bundle: ..., traitCollection: ...)`
+    static func summaryDeparture(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.summaryDeparture, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `DetailViewController`.
     static let detailViewController = _R.nib._DetailViewController()
@@ -37,6 +58,8 @@ struct R: Rswift.Validatable {
     static let homeViewController = _R.nib._HomeViewController()
     /// Nib `LoginViewController`.
     static let loginViewController = _R.nib._LoginViewController()
+    /// Nib `OriginAndDestinationTableViewCell`.
+    static let originAndDestinationTableViewCell = _R.nib._OriginAndDestinationTableViewCell()
     /// Nib `SignUpViewController`.
     static let signUpViewController = _R.nib._SignUpViewController()
     
@@ -58,6 +81,12 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.loginViewController)
     }
     
+    /// `UINib(name: "OriginAndDestinationTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.originAndDestinationTableViewCell) instead")
+    static func originAndDestinationTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.originAndDestinationTableViewCell)
+    }
+    
     /// `UINib(name: "SignUpViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.signUpViewController) instead")
     static func signUpViewController(_: Void = ()) -> UIKit.UINib {
@@ -74,6 +103,10 @@ struct R: Rswift.Validatable {
     
     static func loginViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.loginViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func originAndDestinationTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OriginAndDestinationTableViewCell? {
+      return R.nib.originAndDestinationTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OriginAndDestinationTableViewCell
     }
     
     static func signUpViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -118,6 +151,7 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _LoginViewController.validate()
+      try _OriginAndDestinationTableViewCell.validate()
     }
     
     struct _DetailViewController: Rswift.NibResourceType {
@@ -152,6 +186,24 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "school", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'school' is used in nib 'LoginViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _OriginAndDestinationTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "OriginAndDestinationTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OriginAndDestinationTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OriginAndDestinationTableViewCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Arrivals", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Arrivals' is used in nib 'OriginAndDestinationTableViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Departures", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Departures' is used in nib 'OriginAndDestinationTableViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }

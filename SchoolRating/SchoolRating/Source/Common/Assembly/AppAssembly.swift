@@ -15,6 +15,5 @@ final class AppAssembly {
     private(set) lazy var navigationController: UINavigationController = {
         return UINavigationController()
     }()
-    
     private(set) lazy var coreAssembly = CoreAssembly(navigationController: navigationController)
 }

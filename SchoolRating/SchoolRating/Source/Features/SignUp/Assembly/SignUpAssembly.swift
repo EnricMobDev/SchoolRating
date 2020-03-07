@@ -30,7 +30,7 @@ final class SignUpAssembly {
 // MARK: - SignUpViewControllerProvider
 extension SignUpAssembly: SignUpViewControllerProvider {
     
-    func navigateToSignUpViewController() -> UIViewController {
-        return viewController()
+    func navigateToSignUpViewController() -> CoordinatorProtocol {
+        return AppCoordinator(navigationController: navigationController)
     }
 }

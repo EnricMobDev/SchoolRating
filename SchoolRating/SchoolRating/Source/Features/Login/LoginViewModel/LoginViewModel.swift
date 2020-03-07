@@ -10,12 +10,28 @@ import Foundation
 
 protocol LoginViewModelProtocol: class {
     var view: LoginViewController? { get set }
+    func didSelect()
+    func showFlights()
 }
 
-class LoginViewModel: LoginViewModelProtocol {
+final class LoginViewModel: LoginViewModelProtocol {
     
-    //MARK: - Variables
-    var view: LoginViewController?
+    // MARK: - Properties
+    private let signUpAssembly: CoordinatorProtocol
+    private let homeAssembly: CoordinatorProtocol
+    weak var view: LoginViewController?
+
+    // MARK: - Initializers
+    init(signUpAssembly: CoordinatorProtocol, homeAssembly: CoordinatorProtocol) {
+        self.signUpAssembly = signUpAssembly
+        self.homeAssembly = homeAssembly
+    }
+
+    func didSelect() {
+        signUpAssembly.showSignUpViewController()
+    }
     
-    init() {}
+    func showFlights() {
+        homeAssembly.showHomeViewController()
+    }
 }

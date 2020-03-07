@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SignUpViewControllerProvider {
-    func navigateToSignUpViewController() -> UIViewController
+    func navigateToSignUpViewController() -> CoordinatorProtocol
 }
 
 class SignUpViewController: BaseViewController {
