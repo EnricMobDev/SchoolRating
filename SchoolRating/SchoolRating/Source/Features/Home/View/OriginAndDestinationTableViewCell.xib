@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="201" id="KGk-i7-Jjw" customClass="OriginAndDestinationTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="201" id="KGk-i7-Jjw" customClass="OriginAndDestinationTableViewCell" customModule="SchoolRating" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="348" height="197"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="348" height="196.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="348" height="197"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-Cw-FbN">
-                        <rect key="frame" x="20" y="10" width="308" height="176.5"/>
+                        <rect key="frame" x="20" y="10" width="308" height="177"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYd-qk-kKa">
-                                <rect key="frame" x="153.5" y="15" width="1" height="152.5"/>
+                                <rect key="frame" x="153.5" y="15" width="1" height="153"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="cCy-9c-xC6"/>
@@ -89,7 +86,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEc-EE-kfX">
-                                <rect key="frame" x="0.0" y="118.5" width="308" height="53.5"/>
+                                <rect key="frame" x="0.0" y="118.5" width="308" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-tA-ArV">
                                         <rect key="frame" x="94" y="6" width="45" height="27"/>
@@ -98,7 +95,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="84" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqj-QP-5mp">
-                                        <rect key="frame" x="141" y="5" width="26" height="28.5"/>
+                                        <rect key="frame" x="141" y="5" width="26" height="29"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -150,7 +147,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="arrivalImageView" destination="zhh-7a-itY" id="NGg-wO-gut"/>
                 <outlet property="containerView" destination="XKn-Cw-FbN" id="suF-fp-Qht"/>
+                <outlet property="departureImageView" destination="BSc-0T-eGU" id="LKl-IY-a7R"/>
+                <outlet property="fromLabel" destination="UN4-tA-ArV" id="ALq-UW-ukT"/>
                 <outlet property="inboundLabel" destination="WBi-xQ-jEi" id="Cit-gh-YZc"/>
                 <outlet property="outboundLabel" destination="r07-9z-IUy" id="9BN-3A-pbd"/>
                 <outlet property="priceLabel" destination="Mqj-QP-5mp" id="4C9-cW-BOq"/>

@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="13k-8Y-OWj">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="13k-8Y-OWj">
+                    <rect key="frame" x="0.0" y="10" width="414" height="886"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -28,6 +28,7 @@
                 <constraint firstItem="13k-8Y-OWj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="K9w-vc-XNh"/>
                 <constraint firstItem="13k-8Y-OWj" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" priority="250" id="MDi-Gi-02o"/>
                 <constraint firstItem="13k-8Y-OWj" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ewj-e1-aBB"/>
+                <constraint firstItem="13k-8Y-OWj" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="gVg-EB-rxR"/>
                 <constraint firstItem="13k-8Y-OWj" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="lvb-Yr-0pt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

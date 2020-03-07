@@ -24,13 +24,13 @@
 		C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */; };
 		C51750862412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51750842412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib */; };
 		C517508D2413B01200BBEFCD /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517508C2413B01200BBEFCD /* HomeAssembly.swift */; };
+		C51750942413F5B500BBEFCD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750922413F5B500BBEFCD /* InitialViewController.swift */; };
+		C51750952413F5B500BBEFCD /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51750932413F5B500BBEFCD /* InitialViewController.xib */; };
 		C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530B9F723AEE92200873610 /* AppDelegate.swift */; };
 		C530BA0123AEE92500873610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0023AEE92500873610 /* Assets.xcassets */; };
 		C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0223AEE92500873610 /* LaunchScreen.storyboard */; };
 		C530BA0F23AEE92500873610 /* SchoolRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA0E23AEE92500873610 /* SchoolRatingTests.swift */; };
 		C530BA1A23AEE92500873610 /* SchoolRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */; };
-		C530BA3623AEEA8F00873610 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3423AEEA8F00873610 /* LoginViewController.swift */; };
-		C530BA3823AEEBAD00873610 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA3523AEEA8F00873610 /* LoginViewController.xib */; };
 		C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3F23AEF07900873610 /* SignUpViewController.swift */; };
 		C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4023AEF07900873610 /* SignUpViewController.xib */; };
 		C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475823BFC1D100BE446C /* DetailViewController.swift */; };
@@ -38,11 +38,11 @@
 		C584EE5E24052A0D00E09FC2 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */; };
 		C584EE6024052A3400E09FC2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE5F24052A3400E09FC2 /* AppCoordinator.swift */; };
 		C584EE6224052B5900E09FC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6124052B5900E09FC2 /* BaseViewController.swift */; };
-		C584EE682409EDCE00E09FC2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE672409EDCE00E09FC2 /* LoginViewModel.swift */; };
+		C584EE682409EDCE00E09FC2 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */; };
 		C584EE6B2409EE0700E09FC2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6A2409EE0700E09FC2 /* SignUpViewModel.swift */; };
 		C584EE6F2409EE9200E09FC2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6E2409EE9200E09FC2 /* HomeViewModel.swift */; };
 		C584EE732409EECF00E09FC2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE722409EECF00E09FC2 /* DetailViewModel.swift */; };
-		C584EE752409F28900E09FC2 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE742409F28900E09FC2 /* LoginAssembly.swift */; };
+		C584EE752409F28900E09FC2 /* InitialAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE742409F28900E09FC2 /* InitialAssembly.swift */; };
 		C584EE782409F39200E09FC2 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE772409F39200E09FC2 /* CoreAssembly.swift */; };
 		C584EE7A2409F47200E09FC2 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE792409F47200E09FC2 /* AppAssembly.swift */; };
 		C584EE83240A010900E09FC2 /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE82240A010900E09FC2 /* SignUpAssembly.swift */; };
@@ -93,6 +93,8 @@
 		C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginAndDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		C51750842412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginAndDestinationTableViewCell.xib; sourceTree = "<group>"; };
 		C517508C2413B01200BBEFCD /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		C51750922413F5B500BBEFCD /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		C51750932413F5B500BBEFCD /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		C530B9F423AEE92200873610 /* SchoolRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C530B9F723AEE92200873610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C530BA0023AEE92500873610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +106,6 @@
 		C530BA1523AEE92500873610 /* SchoolRatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolRatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRatingUITests.swift; sourceTree = "<group>"; };
 		C530BA1B23AEE92500873610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C530BA3423AEEA8F00873610 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C530BA3523AEEA8F00873610 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C530BA3F23AEF07900873610 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C530BA4023AEF07900873610 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		C565475823BFC1D100BE446C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -113,11 +113,11 @@
 		C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		C584EE5F24052A3400E09FC2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C584EE6124052B5900E09FC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C584EE672409EDCE00E09FC2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		C584EE6A2409EE0700E09FC2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C584EE6E2409EE9200E09FC2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C584EE722409EECF00E09FC2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		C584EE742409F28900E09FC2 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		C584EE742409F28900E09FC2 /* InitialAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAssembly.swift; sourceTree = "<group>"; };
 		C584EE772409F39200E09FC2 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		C584EE792409F47200E09FC2 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		C584EE82240A010900E09FC2 /* SignUpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				C584EE6124052B5900E09FC2 /* BaseViewController.swift */,
-				C530BA2F23AEEA4300873610 /* Login */,
+				C530BA2F23AEEA4300873610 /* InitialView */,
 				C530BA3023AEEA5200873610 /* SignUp */,
 				C58DD44223E1C3AC000B3C56 /* Home */,
 				C565475423BFC15900BE446C /* Detail */,
@@ -367,14 +367,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		C530BA2F23AEEA4300873610 /* Login */ = {
+		C530BA2F23AEEA4300873610 /* InitialView */ = {
 			isa = PBXGroup;
 			children = (
 				C584EE80240A00E700E09FC2 /* Assembly */,
 				C584EE662409EDA600E09FC2 /* LoginViewModel */,
 				C530BA3323AEEA7500873610 /* LoginViewController */,
 			);
-			path = Login;
+			path = InitialView;
 			sourceTree = "<group>";
 		};
 		C530BA3023AEEA5200873610 /* SignUp */ = {
@@ -390,8 +390,8 @@
 		C530BA3323AEEA7500873610 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C530BA3423AEEA8F00873610 /* LoginViewController.swift */,
-				C530BA3523AEEA8F00873610 /* LoginViewController.xib */,
+				C51750922413F5B500BBEFCD /* InitialViewController.swift */,
+				C51750932413F5B500BBEFCD /* InitialViewController.xib */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -417,7 +417,7 @@
 		C584EE662409EDA600E09FC2 /* LoginViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C584EE672409EDCE00E09FC2 /* LoginViewModel.swift */,
+				C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */,
 			);
 			path = LoginViewModel;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 		C584EE80240A00E700E09FC2 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				C584EE742409F28900E09FC2 /* LoginAssembly.swift */,
+				C584EE742409F28900E09FC2 /* InitialAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -626,8 +626,8 @@
 				C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */,
 				C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */,
 				C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */,
+				C51750952413F5B500BBEFCD /* InitialViewController.xib in Resources */,
 				C51750862412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib in Resources */,
-				C530BA3823AEEBAD00873610 /* LoginViewController.xib in Resources */,
 				C58DD44623E1C3C0000B3C56 /* HomeViewController.xib in Resources */,
 				C530BA0123AEE92500873610 /* Assets.xcassets in Resources */,
 			);
@@ -780,9 +780,10 @@
 				C51750782412CEEC00BBEFCD /* Constants.swift in Sources */,
 				C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */,
 				C51750812412DB2C00BBEFCD /* CellIdentifier.swift in Sources */,
+				C51750942413F5B500BBEFCD /* InitialViewController.swift in Sources */,
 				C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */,
 				C584EE6024052A3400E09FC2 /* AppCoordinator.swift in Sources */,
-				C584EE682409EDCE00E09FC2 /* LoginViewModel.swift in Sources */,
+				C584EE682409EDCE00E09FC2 /* InitialViewModel.swift in Sources */,
 				C517507E2412CFFE00BBEFCD /* FlightResponseManagerCache.swift in Sources */,
 				C51750722412C5EE00BBEFCD /* CurrencyResponse.swift in Sources */,
 				C584EE83240A010900E09FC2 /* SignUpAssembly.swift in Sources */,
@@ -790,13 +791,12 @@
 				C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */,
 				C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */,
 				C517508D2413B01200BBEFCD /* HomeAssembly.swift in Sources */,
-				C584EE752409F28900E09FC2 /* LoginAssembly.swift in Sources */,
+				C584EE752409F28900E09FC2 /* InitialAssembly.swift in Sources */,
 				C584EE6224052B5900E09FC2 /* BaseViewController.swift in Sources */,
 				C584EE5E24052A0D00E09FC2 /* Coordinatable.swift in Sources */,
 				C51750712412C5EE00BBEFCD /* FlightsResponse.swift in Sources */,
 				C584EE6F2409EE9200E09FC2 /* HomeViewModel.swift in Sources */,
 				C51750752412C6A200BBEFCD /* HomeViewControllerInteractor.swift in Sources */,
-				C530BA3623AEEA8F00873610 /* LoginViewController.swift in Sources */,
 				C517507B2412CF9600BBEFCD /* FlightResponseModel.swift in Sources */,
 				C517506E2412C5EE00BBEFCD /* ApiClient.swift in Sources */,
 				C517506F2412C5EE00BBEFCD /* Resource.swift in Sources */,

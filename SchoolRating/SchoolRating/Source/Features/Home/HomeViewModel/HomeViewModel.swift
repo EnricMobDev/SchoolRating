@@ -8,40 +8,34 @@
 
 import UIKit
 
-protocol HomeViewModelProtocol: class {
-    var view: HomeViewController? { get set }
+protocol HomeBinding: class {
+    func reloadUI(with data: [FlightsResponseModel])
 }
 
-final class HomeViewModel: NSObject, HomeViewModelProtocol {
+final class HomeViewModel {
     
     //MARK: - Variables
-    weak var view: HomeViewController?
+    weak var view: HomeBinding?
+    
     private var listOfFlights: [FlightsResponseModel] = []
+    private var interactor: HomeViewControllerInteractor
     
     //MARK: - Lifecycle
-    override init() {
-        super.init()
-        view?.tableView.dataSource = self
-        let flights = HomeViewControllerInteractor()
-        flights.getAllFlights()
+    init(interactor: HomeViewControllerInteractor) {
+        self.interactor = interactor
+        self.fetchAllFlights()
+    }
+    
+    //MARK: - Private func
+    private func fetchAllFlights() {
+        interactor.delegate = self
+        interactor.getAllFlights()
     }
 }
 
 //MARK: - FetchFlightsProtocol
 extension HomeViewModel: FetchFlightsProtocol {
-    
-    func listOf(flights: [FlightsResponseModel]) {
-        self.listOfFlights = flights
-    }
-}
-
-//MARK: - UITableViewDataSource
-extension HomeViewModel: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listOfFlights.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       return UITableViewCell()
+    func listOf(fligths: [FlightsResponseModel]) {
+        self.view?.reloadUI(with: fligths)
     }
 }

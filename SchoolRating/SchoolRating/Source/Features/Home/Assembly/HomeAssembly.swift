@@ -24,12 +24,18 @@ final class HomeAssembly {
     
     // MARK: - Public Methods
     public func viewController() -> UIViewController {
-        return HomeViewController(viewModel: viewModel())
+        HomeViewController(viewModel: viewModel())
     }
     
     // MARK: - Internal Methods
-    private func viewModel() -> HomeViewModelProtocol {
-        return HomeViewModel()
+    private func viewModel() -> HomeViewModel {
+        HomeViewModel(interactor: homeInteractor())
+    }
+    
+    private func homeInteractor() -> HomeViewControllerInteractor {
+        let apiClient = APIClient()
+        let repository = Repository(apiClient: apiClient)
+        return HomeViewControllerInteractor(repository: repository)
     }
 }
 

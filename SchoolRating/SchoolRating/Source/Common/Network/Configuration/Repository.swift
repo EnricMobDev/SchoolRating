@@ -8,14 +8,22 @@
 
 import Foundation
 
-final class Repository {
+protocol RepositoryProtocol {
+    func getFlights(_ completion: @escaping (FlightsResponse?, Error?) -> Void)
+    func getCurrencyExchange(withUrl: String, completion: @escaping (CurrencyResponse?, Error?) -> Void)
+}
+
+final class Repository: RepositoryProtocol {
     
+    // MARK: - Variables
     private let apiClient: APIClient
-        
+    
+    // MARK: - Initializer
     init(apiClient: APIClient) {
         self.apiClient = apiClient
     }
     
+    // MARK: - Initializer
     func getFlights(_ completion: @escaping (FlightsResponse?, Error?) -> Void) {
         guard let url = URL(string: Constants.Networking.Url.base_url) else { return }
         

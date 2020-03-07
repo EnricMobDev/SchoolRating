@@ -35,7 +35,10 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func showHomeViewController() {
-        let homeViewModel = HomeViewModel()
+        let apiClient = APIClient()
+        let repository = Repository(apiClient: apiClient)
+        let interactor = HomeViewControllerInteractor(repository: repository)
+        let homeViewModel = HomeViewModel(interactor: interactor)
         let homeViewController = HomeViewController(viewModel: homeViewModel)
         homeViewController.coordinator = self
         navigationController.pushViewController(homeViewController, animated: true)

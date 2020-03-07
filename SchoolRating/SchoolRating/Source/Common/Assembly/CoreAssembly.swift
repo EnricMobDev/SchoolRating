@@ -16,8 +16,7 @@ final class CoreAssembly {
     private(set) lazy var signUpAssembly = SignUpAssembly(navigationController: navigationController)
     private(set) lazy var homeAssembly = HomeAssembly(navigationController: navigationController)
     
-    private(set) lazy var loginAssembly = LoginAssembly(signUpAssembly: signUpAssembly,
-                                                        homeAssembly: homeAssembly)
+    private(set) lazy var loginAssembly = InitialAssembly(homeAssembly: homeAssembly)
     
     // MARK: - Initializers
     public init(navigationController: UINavigationController) {

@@ -12,8 +12,9 @@
 
 import UIKit
 
-protocol FetchFlightsProtocol {
-    func listOf(flights: [FlightsResponseModel])
+protocol FetchFlightsProtocol: class {
+    func listOf(fligths: [FlightsResponseModel])
+//    func getAllFlights() -> [FlightsResponseModel]
 }
 
 class HomeViewControllerInteractor {
@@ -22,11 +23,15 @@ class HomeViewControllerInteractor {
     var dolarExchange: Double?
     var yenExchange: Double?
     var poundExchange: Double?
-    var listOfFlights: FetchFlightsProtocol?
+    weak var delegate: FetchFlightsProtocol?
     
     // MARK: - Constants
-    let repository = Repository(apiClient: APIClient())
     let dispatchGroup = DispatchGroup()
+    let repository: RepositoryProtocol
+    
+    init(repository: RepositoryProtocol) {
+        self.repository = repository
+    }
     
     func getAllFlights() {
         fetchExchangesWith(url: Constants.Networking.Url.dolar_url)
@@ -68,7 +73,8 @@ class HomeViewControllerInteractor {
                 guard let flights = flights else { return }
                 let flightResponseModel = self.bindServiceResponseToOur(model: flights)
                 self.saveFligthsInToCache(flightResponseModel)
-                self.listOfFlights?.listOf(flights: flightResponseModel)
+                
+                self.delegate?.listOf(fligths: flightResponseModel)
             }
         }
     }

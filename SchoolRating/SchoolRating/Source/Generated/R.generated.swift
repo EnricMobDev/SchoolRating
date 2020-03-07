@@ -16,10 +16,27 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  struct color {
+    /// Color `CustomIron`.
+    static let customIron = Rswift.ColorResource(bundle: R.hostingBundle, name: "CustomIron")
+    
+    /// `UIColor(named: "CustomIron", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func customIron(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.customIron, compatibleWith: traitCollection)
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
     /// Image `Arrivals`.
     static let arrivals = Rswift.ImageResource(bundle: R.hostingBundle, name: "Arrivals")
+    /// Image `CircularDragon`.
+    static let circularDragon = Rswift.ImageResource(bundle: R.hostingBundle, name: "CircularDragon")
     /// Image `Departures`.
     static let departures = Rswift.ImageResource(bundle: R.hostingBundle, name: "Departures")
     /// Image `SummaryArrivals`.
@@ -30,6 +47,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Arrivals", bundle: ..., traitCollection: ...)`
     static func arrivals(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.arrivals, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "CircularDragon", bundle: ..., traitCollection: ...)`
+    static func circularDragon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.circularDragon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "Departures", bundle: ..., traitCollection: ...)`
@@ -56,8 +78,8 @@ struct R: Rswift.Validatable {
     static let detailViewController = _R.nib._DetailViewController()
     /// Nib `HomeViewController`.
     static let homeViewController = _R.nib._HomeViewController()
-    /// Nib `LoginViewController`.
-    static let loginViewController = _R.nib._LoginViewController()
+    /// Nib `InitialViewController`.
+    static let initialViewController = _R.nib._InitialViewController()
     /// Nib `OriginAndDestinationTableViewCell`.
     static let originAndDestinationTableViewCell = _R.nib._OriginAndDestinationTableViewCell()
     /// Nib `SignUpViewController`.
@@ -75,10 +97,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.homeViewController)
     }
     
-    /// `UINib(name: "LoginViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.loginViewController) instead")
-    static func loginViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.loginViewController)
+    /// `UINib(name: "InitialViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.initialViewController) instead")
+    static func initialViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.initialViewController)
     }
     
     /// `UINib(name: "OriginAndDestinationTableViewCell", in: bundle)`
@@ -101,8 +123,8 @@ struct R: Rswift.Validatable {
       return R.nib.homeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
-    static func loginViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.loginViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func initialViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.initialViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func originAndDestinationTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OriginAndDestinationTableViewCell? {
@@ -150,7 +172,7 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _LoginViewController.validate()
+      try _InitialViewController.validate()
       try _OriginAndDestinationTableViewCell.validate()
     }
     
@@ -176,16 +198,16 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _LoginViewController: Rswift.NibResourceType, Rswift.Validatable {
+    struct _InitialViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
-      let name = "LoginViewController"
+      let name = "InitialViewController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "school", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'school' is used in nib 'LoginViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "CircularDragon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'CircularDragon' is used in nib 'InitialViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }

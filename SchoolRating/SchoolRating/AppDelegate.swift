@@ -19,12 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //startCoordinator()    
         startAppAssembly()
         return true
-        
-        
     }
     
     private func startAppAssembly() {
-        
         let initialViewController = appAssembly.coreAssembly.loginAssembly.viewController()
         
         appAssembly.navigationController.pushViewController(initialViewController,
