@@ -128,6 +128,7 @@ final class HomeViewControllerInteractor {
     }
     
     private func rounded(price: Double) -> String {
-        return String(format: Constants.formatWithTwoDecimals, price).replacingOccurrences(of: ".", with: ",")
+        return String(format: "%.2f",
+                      price).replacingOccurrences(of: ".", with: ",")
     }
 }

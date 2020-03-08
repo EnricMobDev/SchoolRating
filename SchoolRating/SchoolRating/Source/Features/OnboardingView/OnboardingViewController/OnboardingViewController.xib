@@ -29,7 +29,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircularDragon" translatesAutoresizingMaskIntoConstraints="NO" id="myS-iC-Es7">
                             <rect key="frame" x="0.0" y="202" width="414" height="414"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="myS-iC-Es7" secondAttribute="height" multiplier="120:120" id="oGR-RW-FQF"/>
+                                <constraint firstAttribute="width" secondItem="myS-iC-Es7" secondAttribute="height" multiplier="1:1" id="oGR-RW-FQF"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJc-T4-Lal">
@@ -43,7 +43,7 @@
                                 <action selector="chooseYourFlight:" destination="-1" eventType="touchUpInside" id="tEd-pV-Jzf"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Enric Pou Villanueva" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-XU-vDb">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Created by Enric Pou Villanueva" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-XU-vDb">
                             <rect key="frame" x="67" y="711.5" width="280.5" height="106.5"/>
                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                             <nil key="textColor"/>

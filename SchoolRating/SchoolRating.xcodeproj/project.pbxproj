@@ -17,7 +17,6 @@
 		C51750712412C5EE00BBEFCD /* FlightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517506B2412C5EE00BBEFCD /* FlightsResponse.swift */; };
 		C51750722412C5EE00BBEFCD /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517506C2412C5EE00BBEFCD /* CurrencyResponse.swift */; };
 		C51750752412C6A200BBEFCD /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750742412C6A100BBEFCD /* HomeViewControllerInteractor.swift */; };
-		C51750782412CEEC00BBEFCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750772412CEEC00BBEFCD /* Constants.swift */; };
 		C517507B2412CF9600BBEFCD /* FlightResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517507A2412CF9600BBEFCD /* FlightResponseModel.swift */; };
 		C51750812412DB2C00BBEFCD /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750802412DB2C00BBEFCD /* CellIdentifier.swift */; };
 		C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */; };
@@ -32,6 +31,8 @@
 		C530BA0F23AEE92500873610 /* SchoolRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA0E23AEE92500873610 /* SchoolRatingTests.swift */; };
 		C530BA1A23AEE92500873610 /* SchoolRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */; };
 		C55F6D4C241563C6009713CC /* FlightsResponseModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F6D4B241563C6009713CC /* FlightsResponseModelMock.swift */; };
+		C55F6D4F24156969009713CC /* SnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F6D4E24156969009713CC /* SnapshotTest.swift */; };
+		C55F6D5124156D2E009713CC /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F6D5024156D2E009713CC /* Spinner.swift */; };
 		C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475823BFC1D100BE446C /* DetailViewController.swift */; };
 		C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C565475923BFC1D100BE446C /* DetailViewController.xib */; };
 		C584EE5E24052A0D00E09FC2 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */; };
@@ -83,7 +84,6 @@
 		C517506B2412C5EE00BBEFCD /* FlightsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsResponse.swift; sourceTree = "<group>"; };
 		C517506C2412C5EE00BBEFCD /* CurrencyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
 		C51750742412C6A100BBEFCD /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
-		C51750772412CEEC00BBEFCD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C517507A2412CF9600BBEFCD /* FlightResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightResponseModel.swift; sourceTree = "<group>"; };
 		C51750802412DB2C00BBEFCD /* CellIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
 		C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginAndDestinationTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +104,8 @@
 		C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRatingUITests.swift; sourceTree = "<group>"; };
 		C530BA1B23AEE92500873610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55F6D4B241563C6009713CC /* FlightsResponseModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResponseModelMock.swift; sourceTree = "<group>"; };
+		C55F6D4E24156969009713CC /* SnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTest.swift; sourceTree = "<group>"; };
+		C55F6D5024156D2E009713CC /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		C565475823BFC1D100BE446C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C565475923BFC1D100BE446C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
@@ -211,14 +213,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		C51750762412CEEC00BBEFCD /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C51750772412CEEC00BBEFCD /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		C51750792412CF8D00BBEFCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +292,7 @@
 		C530BA0D23AEE92500873610 /* SchoolRatingTests */ = {
 			isa = PBXGroup;
 			children = (
+				C55F6D4D2415693E009713CC /* SnapshotTesting */,
 				C55F6D4A2415631C009713CC /* ExpectedResponses */,
 				C52D7B152415558400C74039 /* RepositoryProtocolMock */,
 				C530BA0E23AEE92500873610 /* SchoolRatingTests.swift */,
@@ -381,6 +376,14 @@
 			path = ExpectedResponses;
 			sourceTree = "<group>";
 		};
+		C55F6D4D2415693E009713CC /* SnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				C55F6D4E24156969009713CC /* SnapshotTest.swift */,
+			);
+			path = SnapshotTesting;
+			sourceTree = "<group>";
+		};
 		C565475423BFC15900BE446C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,7 +441,6 @@
 			children = (
 				C5A89CC12414FC370003C9BB /* Extensions */,
 				C517507F2412DB2C00BBEFCD /* Protocols */,
-				C51750762412CEEC00BBEFCD /* Constants */,
 				C51750642412C5EE00BBEFCD /* Network */,
 			);
 			path = Common;
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				C5A89CC22414FC8D0003C9BB /* UINavigationController+setupNavBar.swift */,
+				C55F6D5024156D2E009713CC /* Spinner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				C530BA0623AEE92500873610 /* Sources */,
 				C530BA0723AEE92500873610 /* Frameworks */,
 				C530BA0823AEE92500873610 /* Resources */,
+				FF0273319AC6F059BCAC443F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -744,6 +748,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF0273319AC6F059BCAC443F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolRatingTests/Pods-SchoolRatingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolRatingTests/Pods-SchoolRatingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SchoolRatingTests/Pods-SchoolRatingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -751,7 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51750782412CEEC00BBEFCD /* Constants.swift in Sources */,
+				C55F6D5124156D2E009713CC /* Spinner.swift in Sources */,
 				C51750812412DB2C00BBEFCD /* CellIdentifier.swift in Sources */,
 				C51750942413F5B500BBEFCD /* OnboardingViewController.swift in Sources */,
 				C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */,
@@ -785,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55F6D4C241563C6009713CC /* FlightsResponseModelMock.swift in Sources */,
+				C55F6D4F24156969009713CC /* SnapshotTest.swift in Sources */,
 				C530BA0F23AEE92500873610 /* SchoolRatingTests.swift in Sources */,
 				C52D7B17241555AC00C74039 /* RepositoryProtocolMock.swift in Sources */,
 			);

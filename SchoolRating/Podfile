@@ -11,7 +11,7 @@ target 'SchoolRating' do
   target 'SchoolRatingTests' do
     inherit! :search_paths
     # Pods for testing
-     # pod 'SnapshotTesting', '~> 1.7.2'
+    pod 'SnapshotTesting', '~> 1.7.2'
   end
 
   target 'SchoolRatingUITests' do

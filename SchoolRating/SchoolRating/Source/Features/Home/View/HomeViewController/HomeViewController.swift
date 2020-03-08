@@ -22,6 +22,7 @@ final class HomeViewController: BaseViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.showSpinner()
         tableView.delegate = self
         tableView.dataSource = self
         self.viewModel.view = self
@@ -45,6 +46,7 @@ extension HomeViewController: HomeBinding {
     func reloadUI(with data: [FlightsResponseModel]) {
         self.flights = data
         OperationQueue.main.addOperation {
+            self.tableView.removeSpinner()
             self.tableView.reloadData()
         }
     }

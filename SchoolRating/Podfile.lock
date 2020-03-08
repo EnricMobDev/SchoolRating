@@ -2,19 +2,23 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - SnapshotTesting (1.7.2)
 
 DEPENDENCIES:
   - R.swift (= 5.0.3)
+  - SnapshotTesting (~> 1.7.2)
 
 SPEC REPOS:
   trunk:
     - R.swift
     - R.swift.Library
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SnapshotTesting: 8caa6661fea7c8019d5b46de77c16bab99c36c5c
 
-PODFILE CHECKSUM: da6d83884158ddc9549e69d2da956a5783496aa5
+PODFILE CHECKSUM: c99604baebf8e7cfbe7fdf97c5a6418dac75d53d
 
 COCOAPODS: 1.8.1
