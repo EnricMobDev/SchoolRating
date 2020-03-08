@@ -8,23 +8,23 @@
 
 import UIKit
 
-final class InitialAssembly {
+final class OnboardingAssembly {
     
     // MARK: - Properties
-    private let homeAssembly: HomeAssembly
-    
+    private let coordinator: CoordinatorProtocol
+
     // MARK: - Initializers
-    init(homeAssembly: HomeAssembly) {
-        self.homeAssembly = homeAssembly
+    init(coordinator: CoordinatorProtocol) {
+        self.coordinator = coordinator
     }
     
     // MARK: - Public Methods
     public func viewController() -> UIViewController {
-        return InitialViewController(viewModel: viewModel())
+        return OnboardingViewController(viewModel: viewModel())
     }
     
     // MARK: - Internal Methods
-    private func viewModel() -> InitialViewModelProtocol {
-        return InitialViewModel(homeAssembly: homeAssembly.navigateToHomeViewController())
+    private func viewModel() -> OnboardingViewModel {
+        return OnboardingViewModel(coordinator: coordinator)
     }
 }

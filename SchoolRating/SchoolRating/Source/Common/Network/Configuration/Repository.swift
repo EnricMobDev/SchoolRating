@@ -9,8 +9,14 @@
 import Foundation
 
 protocol RepositoryProtocol {
-    func getFlights(_ completion: @escaping (FlightsResponse?, Error?) -> Void)
-    func getCurrencyExchange(withUrl: String, completion: @escaping (CurrencyResponse?, Error?) -> Void)
+    func fetch<T: Codable>(endpoint: Endpoints, _ completion: @escaping (Result<T, APIClientError>) -> Void)
+}
+
+enum Endpoints: String {
+    case dollar = "http://jarvisstark.herokuapp.com/currency?from=USD&to=EUR"
+    case yen = "http://jarvisstark.herokuapp.com/currency?from=JPY&to=EUR"
+    case pound = "http://jarvisstark.herokuapp.com/currency?from=GBP&to=EUR"
+    case flights = "http://odigeo-testios.herokuapp.com/"
 }
 
 final class Repository: RepositoryProtocol {
@@ -23,43 +29,23 @@ final class Repository: RepositoryProtocol {
         self.apiClient = apiClient
     }
     
-    // MARK: - Initializer
-    func getFlights(_ completion: @escaping (FlightsResponse?, Error?) -> Void) {
-        guard let url = URL(string: Constants.Networking.Url.base_url) else { return }
-        
+    // MARK: - Fetch Flights
+    func fetch<T: Codable>(endpoint: Endpoints, _ completion: @escaping (Result<T, APIClientError>) -> Void) {
+        guard let url = URL(string: endpoint.rawValue)
+            else { completion(.failure(APIClientError.noData)); return }
+
         let resource = Resource(url: url)
         apiClient.load(resource) { (result) in
-            
             switch result {
             case .success(let data):
                 do {
-                    let items = try JSONDecoder().decode(FlightsResponse.self, from: data)
-                    completion(items, nil)
+                    let items = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(items))
                 } catch {
-                    completion(nil, error)
+                    completion(.failure(.errorParsing))
                 }
-            case .failure(let error):
-                completion(nil, error)
-            }
-        }
-    }
-    
-    func getCurrencyExchange(withUrl: String, completion: @escaping (CurrencyResponse?, Error?) -> Void) {
-        guard let url = URL(string: withUrl) else { return }
-        
-        let resource = Resource(url: url)
-        apiClient.load(resource) { (result) in
-            
-            switch result {
-            case .success(let data):
-                do {
-                    let items = try JSONDecoder().decode(CurrencyResponse.self, from: data)
-                    completion(items, nil)
-                } catch {
-                    completion(nil, error)
-                }
-            case .failure(let error):
-                completion(nil, error)
+            case .failure:
+                completion(.failure(.noData))
             }
         }
     }

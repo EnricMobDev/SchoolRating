@@ -8,18 +8,14 @@
 
 import UIKit
 
-protocol HomeViewControllerProvider {
-    func navigateToHomeViewController() -> AppCoordinator
-}
-
 final class HomeAssembly {
     
     // MARK: - Properties
-    private let navigationController: UINavigationController
+    private let coordinator: CoordinatorProtocol
     
     // MARK: - Initializers
-    public init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    public init(coordinator: CoordinatorProtocol) {
+        self.coordinator = coordinator
     }
     
     // MARK: - Public Methods
@@ -29,19 +25,9 @@ final class HomeAssembly {
     
     // MARK: - Internal Methods
     private func viewModel() -> HomeViewModel {
-        HomeViewModel(interactor: homeInteractor())
-    }
-    
-    private func homeInteractor() -> HomeViewControllerInteractor {
         let apiClient = APIClient()
         let repository = Repository(apiClient: apiClient)
-        return HomeViewControllerInteractor(repository: repository)
-    }
-}
-
-//MARK: - HomeViewControllerProvider
-extension HomeAssembly: HomeViewControllerProvider {
-    func navigateToHomeViewController() -> AppCoordinator {
-        return AppCoordinator(navigationController: navigationController)
+        let interactor = HomeViewControllerInteractor(repository: repository)
+        return HomeViewModel(coordinator: coordinator, interactor: interactor)
     }
 }

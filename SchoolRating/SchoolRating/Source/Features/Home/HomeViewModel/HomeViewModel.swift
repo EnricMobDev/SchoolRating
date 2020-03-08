@@ -19,17 +19,23 @@ final class HomeViewModel {
     
     private var listOfFlights: [FlightsResponseModel] = []
     private var interactor: HomeViewControllerInteractor
-    
+    private let coordinator: CoordinatorProtocol
+
     //MARK: - Lifecycle
-    init(interactor: HomeViewControllerInteractor) {
+    init(coordinator: CoordinatorProtocol, interactor: HomeViewControllerInteractor) {
+        self.coordinator = coordinator
         self.interactor = interactor
-        self.fetchAllFlights()
+        fetchAllFlights()
     }
     
     //MARK: - Private func
     private func fetchAllFlights() {
         interactor.delegate = self
         interactor.getAllFlights()
+    }
+    
+    func goToDetailVCWith(flight: FlightsResponseModel) {
+        coordinator.showDetailViewController(flightSelected: flight)
     }
 }
 

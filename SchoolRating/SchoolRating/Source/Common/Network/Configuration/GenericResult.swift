@@ -8,11 +8,14 @@
 
 import Foundation
 
-enum Results<T> {
-    case success(T)
-    case failure(Error)
-}
+//enum Results<T> {
+//    case success(T)
+//    case failure(Error)
+//}
 
 enum APIClientError: Error {
     case noData
+    case generic
+    case invalidUrl
+    case errorParsing
 }

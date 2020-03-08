@@ -13,21 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Properties
     var window: UIWindow?
-    let appAssembly = AppAssembly()
+    let coordinator = AppCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //startCoordinator()    
-        startAppAssembly()
+        coordinator.start()
         return true
-    }
-    
-    private func startAppAssembly() {
-        let initialViewController = appAssembly.coreAssembly.loginAssembly.viewController()
-        
-        appAssembly.navigationController.pushViewController(initialViewController,
-                                                            animated: false)
-        appAssembly.window.rootViewController = appAssembly.navigationController
-        appAssembly.window.makeKeyAndVisible()
     }
 }
 

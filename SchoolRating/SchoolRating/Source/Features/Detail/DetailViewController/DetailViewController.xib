@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +9,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="SchoolRating" customModuleProvider="target">
             <connections>
+                <outlet property="inboundArrivalDateLabel" destination="d9X-zI-CIS" id="EtC-wb-Oyd"/>
+                <outlet property="inboundArrivalHourLabel" destination="ODx-R4-yk9" id="jDm-pA-IjL"/>
+                <outlet property="inboundDepartureDateLabel" destination="zHY-6h-MMI" id="1TU-jy-0d7"/>
+                <outlet property="inboundDepartureHourLabel" destination="4u1-bq-x5V" id="rVp-a4-kUD"/>
+                <outlet property="inboundLabel" destination="diO-Gq-kLp" id="do6-hX-bv8"/>
+                <outlet property="outboundArrivalDateLabel" destination="bDU-m4-Aqg" id="WIB-v2-L54"/>
+                <outlet property="outboundArrivalHourLabel" destination="qu9-rX-d1m" id="BNn-Un-hBQ"/>
+                <outlet property="outboundDepartureDateLabel" destination="Spg-8m-Nbv" id="cox-9h-ioF"/>
+                <outlet property="outboundDepartureHourLabel" destination="jVV-81-yfS" id="Teu-97-Cu0"/>
+                <outlet property="outboundLabel" destination="yRV-yZ-8so" id="61p-8R-WGX"/>
+                <outlet property="priceLabel" destination="Z3U-NQ-cHK" id="ZcE-mO-ECo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,28 +28,173 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DetailViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGl-89-xP3">
-                    <rect key="frame" x="129" y="437.5" width="156.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-Ae-cFl">
-                    <rect key="frame" x="154" y="356" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="goToRootView:" destination="-1" eventType="touchUpInside" id="xIb-lX-b5u"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Uh-cz-UNq">
+                    <rect key="frame" x="0.0" y="74" width="414" height="758"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-DO-QXV">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="530.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dzO-Cc-qKx">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="466"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SummaryDeparture" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-6G-uPr">
+                                            <rect key="frame" x="78.5" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="jYn-8i-mY3"/>
+                                                <constraint firstAttribute="width" constant="50" id="kr1-gU-JNd"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volantis " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diO-Gq-kLp">
+                                            <rect key="frame" x="57.5" y="52" width="92" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-6a-Pzl">
+                                            <rect key="frame" x="70.5" y="104" width="66" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHY-6h-MMI">
+                                            <rect key="frame" x="63.5" y="156" width="80.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:43" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u1-bq-x5V">
+                                            <rect key="frame" x="87.5" y="208" width="32" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKJ-Av-46v">
+                                            <rect key="frame" x="77.5" y="260" width="52" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-zI-CIS">
+                                            <rect key="frame" x="63.5" y="312" width="80.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:43" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODx-R4-yk9">
+                                            <rect key="frame" x="87.5" y="364" width="32" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55x-dr-qFp">
+                                            <rect key="frame" x="78.5" y="416" width="50" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-0Z-mdP">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="414"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SummaryArrivals" translatesAutoresizingMaskIntoConstraints="NO" id="6hr-dQ-5wi">
+                                            <rect key="frame" x="78.5" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="kfP-Bl-fpx"/>
+                                                <constraint firstAttribute="height" constant="50" id="yCp-PE-5fL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Arnay " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRV-yZ-8so">
+                                            <rect key="frame" x="66.5" y="52" width="74.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p0-hQ-3sz">
+                                            <rect key="frame" x="70.5" y="104" width="66" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-8m-Nbv">
+                                            <rect key="frame" x="63.5" y="156" width="80.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:43" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVV-81-yfS">
+                                            <rect key="frame" x="87.5" y="208" width="32" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wid-EA-hM6">
+                                            <rect key="frame" x="77.5" y="260" width="52" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/12/2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-m4-Aqg">
+                                            <rect key="frame" x="63.5" y="312" width="80.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:43" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qu9-rX-d1m">
+                                            <rect key="frame" x="87.5" y="364" width="32" height="50"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="dzO-Cc-qKx" firstAttribute="width" secondItem="Aan-DO-QXV" secondAttribute="width" multiplier="0.5" id="ZXj-gd-clJ"/>
+                                <constraint firstItem="7gy-0Z-mdP" firstAttribute="width" secondItem="Aan-DO-QXV" secondAttribute="width" multiplier="0.5" id="hmA-SR-G34"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="IrH-Pl-Jj4">
+                            <rect key="frame" x="164" y="530.5" width="86" height="227.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAZ-Vh-uV3">
+                                    <rect key="frame" x="0.0" y="100.5" width="45" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-8k-gPg">
+                                    <rect key="frame" x="47" y="100.5" width="11.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="84" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3U-NQ-cHK">
+                                    <rect key="frame" x="60.5" y="100.5" width="25.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Aan-DO-QXV" firstAttribute="height" secondItem="3Uh-cz-UNq" secondAttribute="height" multiplier="0.7" id="BfM-W5-ybg"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="SGl-89-xP3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Iu-CH-Vr2"/>
-                <constraint firstItem="SGl-89-xP3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aC5-Oo-gLa"/>
+                <constraint firstItem="Aan-DO-QXV" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="BJj-3B-zvT"/>
+                <constraint firstItem="3Uh-cz-UNq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cxe-Lc-4bM"/>
+                <constraint firstItem="3Uh-cz-UNq" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="eqB-If-PwO"/>
+                <constraint firstItem="3Uh-cz-UNq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="pBx-Re-tQT"/>
+                <constraint firstItem="3Uh-cz-UNq" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="wqT-pj-g1y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="129"/>
         </view>
     </objects>
+    <resources>
+        <image name="SummaryArrivals" width="500" height="500"/>
+        <image name="SummaryDeparture" width="500" height="500"/>
+    </resources>
 </document>

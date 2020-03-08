@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct FlightsResponseModel {
-    
+struct FlightsResponseModel: Equatable {
     var inboundArrivalDate: String?
     var inboundArrivalTime: String?
     var inboundDepartureDate: String?
@@ -25,22 +24,5 @@ struct FlightsResponseModel {
     var outboundOrigin: String?
     
     var price: String?
-    
-    init(inboundArrivalDate: String?, inboundArrivalTime: String?, inboundDepartureDate: String?, inboundDepartureTime: String?, inboundDestination: String?, inboundOrigin: String?, outboundArrivalDate: String?, outboundArrivalTime: String?, outboundDepartureDate: String?, outboundDepartureTime: String?, outbounddDestination: String?, outboundOrigin: String?, price: String?) {
-        
-        self.inboundArrivalDate = inboundArrivalDate
-        self.inboundArrivalTime = inboundArrivalTime
-        self.inboundDepartureDate = inboundDepartureDate
-        self.inboundDepartureTime = inboundDepartureTime
-        self.inboundDestination = inboundDestination
-        self.inboundOrigin = inboundOrigin
-        self.outboundArrivalDate = outboundArrivalDate
-        self.outboundArrivalTime = outboundArrivalTime
-        self.outboundDepartureDate = outboundDepartureDate
-        self.outboundDepartureTime = outboundDepartureTime
-        self.outbounddDestination = outbounddDestination
-        self.outboundOrigin = outboundOrigin
-        self.price = price
-    }
 }
 

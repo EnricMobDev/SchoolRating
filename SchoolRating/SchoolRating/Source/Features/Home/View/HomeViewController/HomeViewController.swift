@@ -22,26 +22,29 @@ final class HomeViewController: BaseViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Flights"
         tableView.delegate = self
         tableView.dataSource = self
+        self.viewModel.view = self
+        navigationController?.setupNavBarIn(viewController: self,
+                                            title: "Choose your Flight",
+                                            largeTitle: true)
     }
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
-        self.viewModel.view = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 //MARK: - HomeBinding
 extension HomeViewController: HomeBinding {
     func reloadUI(with data: [FlightsResponseModel]) {
         self.flights = data
-        DispatchQueue.main.async {
+        OperationQueue.main.addOperation {
             self.tableView.reloadData()
         }
     }
@@ -64,13 +67,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         draw(cell: cell, indexPath: indexPath)
-
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //TODO: Navigate to detail
+        
+        let flight = flights[indexPath.row]
+        viewModel.goToDetailVCWith(flight: flight)
     }
     
     
@@ -79,17 +83,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.inboundLabel.text = self.flights[indexPath.row].inboundOrigin
         cell.outboundLabel.text = self.flights[indexPath.row].outboundOrigin
         cell.priceLabel.text = self.flights[indexPath.row].price
-        cell.containerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner,
-                                                  .layerMinXMaxYCorner, .layerMaxXMinYCorner]
-        drawCornerRadiusIn(cell: cell)
-    }
-    
-    private func drawCornerRadiusIn(cell: OriginAndDestinationTableViewCell) {
+
         cell.containerView.layer.cornerRadius = CORNERRADIUS
-        addBorderTo(cell: cell)
-    }
-    
-    private func addBorderTo(cell: OriginAndDestinationTableViewCell) {
         cell.containerView.layer.borderWidth = BORDER_WIDTH_ONE
         cell.containerView.layer.borderColor = R.color.customIron()?.cgColor
     }

@@ -19,36 +19,33 @@
 		C51750752412C6A200BBEFCD /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750742412C6A100BBEFCD /* HomeViewControllerInteractor.swift */; };
 		C51750782412CEEC00BBEFCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750772412CEEC00BBEFCD /* Constants.swift */; };
 		C517507B2412CF9600BBEFCD /* FlightResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517507A2412CF9600BBEFCD /* FlightResponseModel.swift */; };
-		C517507E2412CFFE00BBEFCD /* FlightResponseManagerCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517507D2412CFFE00BBEFCD /* FlightResponseManagerCache.swift */; };
 		C51750812412DB2C00BBEFCD /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750802412DB2C00BBEFCD /* CellIdentifier.swift */; };
 		C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */; };
 		C51750862412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51750842412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib */; };
 		C517508D2413B01200BBEFCD /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C517508C2413B01200BBEFCD /* HomeAssembly.swift */; };
-		C51750942413F5B500BBEFCD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750922413F5B500BBEFCD /* InitialViewController.swift */; };
-		C51750952413F5B500BBEFCD /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51750932413F5B500BBEFCD /* InitialViewController.xib */; };
+		C51750942413F5B500BBEFCD /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51750922413F5B500BBEFCD /* OnboardingViewController.swift */; };
+		C51750952413F5B500BBEFCD /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51750932413F5B500BBEFCD /* OnboardingViewController.xib */; };
+		C52D7B17241555AC00C74039 /* RepositoryProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D7B16241555AC00C74039 /* RepositoryProtocolMock.swift */; };
 		C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530B9F723AEE92200873610 /* AppDelegate.swift */; };
 		C530BA0123AEE92500873610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0023AEE92500873610 /* Assets.xcassets */; };
 		C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C530BA0223AEE92500873610 /* LaunchScreen.storyboard */; };
 		C530BA0F23AEE92500873610 /* SchoolRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA0E23AEE92500873610 /* SchoolRatingTests.swift */; };
 		C530BA1A23AEE92500873610 /* SchoolRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */; };
-		C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530BA3F23AEF07900873610 /* SignUpViewController.swift */; };
-		C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C530BA4023AEF07900873610 /* SignUpViewController.xib */; };
+		C55F6D4C241563C6009713CC /* FlightsResponseModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F6D4B241563C6009713CC /* FlightsResponseModelMock.swift */; };
 		C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565475823BFC1D100BE446C /* DetailViewController.swift */; };
 		C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C565475923BFC1D100BE446C /* DetailViewController.xib */; };
 		C584EE5E24052A0D00E09FC2 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */; };
 		C584EE6024052A3400E09FC2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE5F24052A3400E09FC2 /* AppCoordinator.swift */; };
 		C584EE6224052B5900E09FC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6124052B5900E09FC2 /* BaseViewController.swift */; };
-		C584EE682409EDCE00E09FC2 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */; };
-		C584EE6B2409EE0700E09FC2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6A2409EE0700E09FC2 /* SignUpViewModel.swift */; };
+		C584EE682409EDCE00E09FC2 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE672409EDCE00E09FC2 /* OnboardingViewModel.swift */; };
 		C584EE6F2409EE9200E09FC2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE6E2409EE9200E09FC2 /* HomeViewModel.swift */; };
 		C584EE732409EECF00E09FC2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE722409EECF00E09FC2 /* DetailViewModel.swift */; };
-		C584EE752409F28900E09FC2 /* InitialAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE742409F28900E09FC2 /* InitialAssembly.swift */; };
-		C584EE782409F39200E09FC2 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE772409F39200E09FC2 /* CoreAssembly.swift */; };
-		C584EE7A2409F47200E09FC2 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE792409F47200E09FC2 /* AppAssembly.swift */; };
-		C584EE83240A010900E09FC2 /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE82240A010900E09FC2 /* SignUpAssembly.swift */; };
+		C584EE752409F28900E09FC2 /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584EE742409F28900E09FC2 /* OnboardingAssembly.swift */; };
 		C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C585112A23E0A4EE008600F0 /* R.generated.swift */; };
 		C58DD44523E1C3C0000B3C56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DD44323E1C3C0000B3C56 /* HomeViewController.swift */; };
 		C58DD44623E1C3C0000B3C56 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58DD44423E1C3C0000B3C56 /* HomeViewController.xib */; };
+		C5A89CC0241418FC0003C9BB /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A89CBF241418FC0003C9BB /* DetailAssembly.swift */; };
+		C5A89CC32414FC8D0003C9BB /* UINavigationController+setupNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A89CC22414FC8D0003C9BB /* UINavigationController+setupNavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,13 +85,13 @@
 		C51750742412C6A100BBEFCD /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
 		C51750772412CEEC00BBEFCD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C517507A2412CF9600BBEFCD /* FlightResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightResponseModel.swift; sourceTree = "<group>"; };
-		C517507D2412CFFE00BBEFCD /* FlightResponseManagerCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightResponseManagerCache.swift; sourceTree = "<group>"; };
 		C51750802412DB2C00BBEFCD /* CellIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
 		C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginAndDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		C51750842412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginAndDestinationTableViewCell.xib; sourceTree = "<group>"; };
 		C517508C2413B01200BBEFCD /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
-		C51750922413F5B500BBEFCD /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		C51750932413F5B500BBEFCD /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
+		C51750922413F5B500BBEFCD /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C51750932413F5B500BBEFCD /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		C52D7B16241555AC00C74039 /* RepositoryProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocolMock.swift; sourceTree = "<group>"; };
 		C530B9F423AEE92200873610 /* SchoolRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C530B9F723AEE92200873610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C530BA0023AEE92500873610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,24 +103,21 @@
 		C530BA1523AEE92500873610 /* SchoolRatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolRatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C530BA1923AEE92500873610 /* SchoolRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRatingUITests.swift; sourceTree = "<group>"; };
 		C530BA1B23AEE92500873610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C530BA3F23AEF07900873610 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		C530BA4023AEF07900873610 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		C55F6D4B241563C6009713CC /* FlightsResponseModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResponseModelMock.swift; sourceTree = "<group>"; };
 		C565475823BFC1D100BE446C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C565475923BFC1D100BE446C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		C584EE5D24052A0D00E09FC2 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		C584EE5F24052A3400E09FC2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C584EE6124052B5900E09FC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
-		C584EE6A2409EE0700E09FC2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		C584EE672409EDCE00E09FC2 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		C584EE6E2409EE9200E09FC2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C584EE722409EECF00E09FC2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		C584EE742409F28900E09FC2 /* InitialAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAssembly.swift; sourceTree = "<group>"; };
-		C584EE772409F39200E09FC2 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
-		C584EE792409F47200E09FC2 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
-		C584EE82240A010900E09FC2 /* SignUpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
+		C584EE742409F28900E09FC2 /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
 		C585112A23E0A4EE008600F0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C58DD44323E1C3C0000B3C56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C58DD44423E1C3C0000B3C56 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C5A89CBF241418FC0003C9BB /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		C5A89CC22414FC8D0003C9BB /* UINavigationController+setupNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+setupNavBar.swift"; sourceTree = "<group>"; };
 		FD58B07DF8A3021D9EAD6A84 /* Pods-SchoolRatingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolRatingTests.release.xcconfig"; path = "Target Support Files/Pods-SchoolRatingTests/Pods-SchoolRatingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,15 +174,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C517504E2412BF7200BBEFCD /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				C584EE792409F47200E09FC2 /* AppAssembly.swift */,
-				C584EE772409F39200E09FC2 /* CoreAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
 		C51750642412C5EE00BBEFCD /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,14 +227,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C517507C2412CFFE00BBEFCD /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				C517507D2412CFFE00BBEFCD /* FlightResponseManagerCache.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		C517507F2412DB2C00BBEFCD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +238,7 @@
 		C51750822412DB7000BBEFCD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C584EE6C2409EE6F00E09FC2 /* HomeViewController */,
 				C51750832412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift */,
 				C51750842412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib */,
 			);
@@ -273,6 +251,14 @@
 				C517508C2413B01200BBEFCD /* HomeAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		C52D7B152415558400C74039 /* RepositoryProtocolMock */ = {
+			isa = PBXGroup;
+			children = (
+				C52D7B16241555AC00C74039 /* RepositoryProtocolMock.swift */,
+			);
+			path = RepositoryProtocolMock;
 			sourceTree = "<group>";
 		};
 		C530B9EB23AEE92200873610 = {
@@ -312,6 +298,8 @@
 		C530BA0D23AEE92500873610 /* SchoolRatingTests */ = {
 			isa = PBXGroup;
 			children = (
+				C55F6D4A2415631C009713CC /* ExpectedResponses */,
+				C52D7B152415558400C74039 /* RepositoryProtocolMock */,
 				C530BA0E23AEE92500873610 /* SchoolRatingTests.swift */,
 				C530BA1023AEE92500873610 /* Info.plist */,
 			);
@@ -342,8 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				C584EE6124052B5900E09FC2 /* BaseViewController.swift */,
-				C530BA2F23AEEA4300873610 /* InitialView */,
-				C530BA3023AEEA5200873610 /* SignUp */,
+				C530BA2F23AEEA4300873610 /* OnboardingView */,
 				C58DD44223E1C3AC000B3C56 /* Home */,
 				C565475423BFC15900BE446C /* Detail */,
 			);
@@ -367,67 +354,49 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		C530BA2F23AEEA4300873610 /* InitialView */ = {
+		C530BA2F23AEEA4300873610 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
 				C584EE80240A00E700E09FC2 /* Assembly */,
-				C584EE662409EDA600E09FC2 /* LoginViewModel */,
-				C530BA3323AEEA7500873610 /* LoginViewController */,
+				C584EE662409EDA600E09FC2 /* OnboardingViewModel */,
+				C530BA3323AEEA7500873610 /* OnboardingViewController */,
 			);
-			path = InitialView;
+			path = OnboardingView;
 			sourceTree = "<group>";
 		};
-		C530BA3023AEEA5200873610 /* SignUp */ = {
+		C530BA3323AEEA7500873610 /* OnboardingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C584EE81240A00F800E09FC2 /* Assembly */,
-				C584EE692409EDF700E09FC2 /* SignUpViewModel */,
-				C530BA3C23AEEFE400873610 /* SignUpViewController */,
+				C51750922413F5B500BBEFCD /* OnboardingViewController.swift */,
+				C51750932413F5B500BBEFCD /* OnboardingViewController.xib */,
 			);
-			path = SignUp;
+			path = OnboardingViewController;
 			sourceTree = "<group>";
 		};
-		C530BA3323AEEA7500873610 /* LoginViewController */ = {
+		C55F6D4A2415631C009713CC /* ExpectedResponses */ = {
 			isa = PBXGroup;
 			children = (
-				C51750922413F5B500BBEFCD /* InitialViewController.swift */,
-				C51750932413F5B500BBEFCD /* InitialViewController.xib */,
+				C55F6D4B241563C6009713CC /* FlightsResponseModelMock.swift */,
 			);
-			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		C530BA3C23AEEFE400873610 /* SignUpViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C530BA3F23AEF07900873610 /* SignUpViewController.swift */,
-				C530BA4023AEF07900873610 /* SignUpViewController.xib */,
-			);
-			path = SignUpViewController;
+			path = ExpectedResponses;
 			sourceTree = "<group>";
 		};
 		C565475423BFC15900BE446C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C5A89CBE241418EB0003C9BB /* Assembly */,
 				C584EE712409EEC000E09FC2 /* DetailViewModel */,
 				C584EE702409EEBB00E09FC2 /* DetailViewController */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		C584EE662409EDA600E09FC2 /* LoginViewModel */ = {
+		C584EE662409EDA600E09FC2 /* OnboardingViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C584EE672409EDCE00E09FC2 /* InitialViewModel.swift */,
+				C584EE672409EDCE00E09FC2 /* OnboardingViewModel.swift */,
 			);
-			path = LoginViewModel;
-			sourceTree = "<group>";
-		};
-		C584EE692409EDF700E09FC2 /* SignUpViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				C584EE6A2409EE0700E09FC2 /* SignUpViewModel.swift */,
-			);
-			path = SignUpViewModel;
+			path = OnboardingViewModel;
 			sourceTree = "<group>";
 		};
 		C584EE6C2409EE6F00E09FC2 /* HomeViewController */ = {
@@ -467,11 +436,10 @@
 		C584EE762409F37B00E09FC2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C5A89CC12414FC370003C9BB /* Extensions */,
 				C517507F2412DB2C00BBEFCD /* Protocols */,
-				C517507C2412CFFE00BBEFCD /* Managers */,
 				C51750762412CEEC00BBEFCD /* Constants */,
 				C51750642412C5EE00BBEFCD /* Network */,
-				C517504E2412BF7200BBEFCD /* Assembly */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -479,15 +447,7 @@
 		C584EE80240A00E700E09FC2 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				C584EE742409F28900E09FC2 /* InitialAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
-		C584EE81240A00F800E09FC2 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				C584EE82240A010900E09FC2 /* SignUpAssembly.swift */,
+				C584EE742409F28900E09FC2 /* OnboardingAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -506,11 +466,26 @@
 				C517508B2413B00100BBEFCD /* Assembly */,
 				C51750822412DB7000BBEFCD /* View */,
 				C51750732412C69600BBEFCD /* Interactor */,
-				C584EE6C2409EE6F00E09FC2 /* HomeViewController */,
 				C584EE6D2409EE7B00E09FC2 /* HomeViewModel */,
 				C51750792412CF8D00BBEFCD /* Model */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C5A89CBE241418EB0003C9BB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				C5A89CBF241418FC0003C9BB /* DetailAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		C5A89CC12414FC370003C9BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5A89CC22414FC8D0003C9BB /* UINavigationController+setupNavBar.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,10 +598,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C530BA4223AEF07900873610 /* SignUpViewController.xib in Resources */,
 				C530BA0423AEE92500873610 /* LaunchScreen.storyboard in Resources */,
 				C565475B23BFC1D100BE446C /* DetailViewController.xib in Resources */,
-				C51750952413F5B500BBEFCD /* InitialViewController.xib in Resources */,
+				C51750952413F5B500BBEFCD /* OnboardingViewController.xib in Resources */,
 				C51750862412DB8500BBEFCD /* OriginAndDestinationTableViewCell.xib in Resources */,
 				C58DD44623E1C3C0000B3C56 /* HomeViewController.xib in Resources */,
 				C530BA0123AEE92500873610 /* Assets.xcassets in Resources */,
@@ -778,20 +752,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51750782412CEEC00BBEFCD /* Constants.swift in Sources */,
-				C530BA4123AEF07900873610 /* SignUpViewController.swift in Sources */,
 				C51750812412DB2C00BBEFCD /* CellIdentifier.swift in Sources */,
-				C51750942413F5B500BBEFCD /* InitialViewController.swift in Sources */,
+				C51750942413F5B500BBEFCD /* OnboardingViewController.swift in Sources */,
 				C51750852412DB8500BBEFCD /* OriginAndDestinationTableViewCell.swift in Sources */,
 				C584EE6024052A3400E09FC2 /* AppCoordinator.swift in Sources */,
-				C584EE682409EDCE00E09FC2 /* InitialViewModel.swift in Sources */,
-				C517507E2412CFFE00BBEFCD /* FlightResponseManagerCache.swift in Sources */,
+				C584EE682409EDCE00E09FC2 /* OnboardingViewModel.swift in Sources */,
 				C51750722412C5EE00BBEFCD /* CurrencyResponse.swift in Sources */,
-				C584EE83240A010900E09FC2 /* SignUpAssembly.swift in Sources */,
-				C584EE782409F39200E09FC2 /* CoreAssembly.swift in Sources */,
 				C565475A23BFC1D100BE446C /* DetailViewController.swift in Sources */,
 				C585112B23E0A4EE008600F0 /* R.generated.swift in Sources */,
 				C517508D2413B01200BBEFCD /* HomeAssembly.swift in Sources */,
-				C584EE752409F28900E09FC2 /* InitialAssembly.swift in Sources */,
+				C584EE752409F28900E09FC2 /* OnboardingAssembly.swift in Sources */,
 				C584EE6224052B5900E09FC2 /* BaseViewController.swift in Sources */,
 				C584EE5E24052A0D00E09FC2 /* Coordinatable.swift in Sources */,
 				C51750712412C5EE00BBEFCD /* FlightsResponse.swift in Sources */,
@@ -799,12 +769,12 @@
 				C51750752412C6A200BBEFCD /* HomeViewControllerInteractor.swift in Sources */,
 				C517507B2412CF9600BBEFCD /* FlightResponseModel.swift in Sources */,
 				C517506E2412C5EE00BBEFCD /* ApiClient.swift in Sources */,
+				C5A89CC32414FC8D0003C9BB /* UINavigationController+setupNavBar.swift in Sources */,
 				C517506F2412C5EE00BBEFCD /* Resource.swift in Sources */,
+				C5A89CC0241418FC0003C9BB /* DetailAssembly.swift in Sources */,
 				C51750702412C5EE00BBEFCD /* Repository.swift in Sources */,
 				C584EE732409EECF00E09FC2 /* DetailViewModel.swift in Sources */,
 				C58DD44523E1C3C0000B3C56 /* HomeViewController.swift in Sources */,
-				C584EE7A2409F47200E09FC2 /* AppAssembly.swift in Sources */,
-				C584EE6B2409EE0700E09FC2 /* SignUpViewModel.swift in Sources */,
 				C517506D2412C5EE00BBEFCD /* GenericResult.swift in Sources */,
 				C530B9F823AEE92200873610 /* AppDelegate.swift in Sources */,
 			);
@@ -814,7 +784,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55F6D4C241563C6009713CC /* FlightsResponseModelMock.swift in Sources */,
 				C530BA0F23AEE92500873610 /* SchoolRatingTests.swift in Sources */,
+				C52D7B17241555AC00C74039 /* RepositoryProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +921,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

@@ -72,18 +72,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `DetailViewController`.
     static let detailViewController = _R.nib._DetailViewController()
     /// Nib `HomeViewController`.
     static let homeViewController = _R.nib._HomeViewController()
-    /// Nib `InitialViewController`.
-    static let initialViewController = _R.nib._InitialViewController()
+    /// Nib `OnboardingViewController`.
+    static let onboardingViewController = _R.nib._OnboardingViewController()
     /// Nib `OriginAndDestinationTableViewCell`.
     static let originAndDestinationTableViewCell = _R.nib._OriginAndDestinationTableViewCell()
-    /// Nib `SignUpViewController`.
-    static let signUpViewController = _R.nib._SignUpViewController()
     
     /// `UINib(name: "DetailViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.detailViewController) instead")
@@ -97,22 +95,16 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.homeViewController)
     }
     
-    /// `UINib(name: "InitialViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.initialViewController) instead")
-    static func initialViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.initialViewController)
+    /// `UINib(name: "OnboardingViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.onboardingViewController) instead")
+    static func onboardingViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.onboardingViewController)
     }
     
     /// `UINib(name: "OriginAndDestinationTableViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.originAndDestinationTableViewCell) instead")
     static func originAndDestinationTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.originAndDestinationTableViewCell)
-    }
-    
-    /// `UINib(name: "SignUpViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.signUpViewController) instead")
-    static func signUpViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.signUpViewController)
     }
     
     static func detailViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -123,16 +115,12 @@ struct R: Rswift.Validatable {
       return R.nib.homeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
-    static func initialViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.initialViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func onboardingViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.onboardingViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func originAndDestinationTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OriginAndDestinationTableViewCell? {
       return R.nib.originAndDestinationTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OriginAndDestinationTableViewCell
-    }
-    
-    static func signUpViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.signUpViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     fileprivate init() {}
@@ -172,16 +160,24 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _InitialViewController.validate()
+      try _DetailViewController.validate()
+      try _OnboardingViewController.validate()
       try _OriginAndDestinationTableViewCell.validate()
     }
     
-    struct _DetailViewController: Rswift.NibResourceType {
+    struct _DetailViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "DetailViewController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "SummaryArrivals", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'SummaryArrivals' is used in nib 'DetailViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "SummaryDeparture", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'SummaryDeparture' is used in nib 'DetailViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+        }
       }
       
       fileprivate init() {}
@@ -198,16 +194,16 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _InitialViewController: Rswift.NibResourceType, Rswift.Validatable {
+    struct _OnboardingViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
-      let name = "InitialViewController"
+      let name = "OnboardingViewController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "CircularDragon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'CircularDragon' is used in nib 'InitialViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "CircularDragon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'CircularDragon' is used in nib 'OnboardingViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }
@@ -228,17 +224,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "Departures", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Departures' is used in nib 'OriginAndDestinationTableViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct _SignUpViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "SignUpViewController"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}

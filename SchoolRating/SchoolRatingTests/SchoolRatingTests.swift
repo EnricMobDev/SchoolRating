@@ -10,16 +10,31 @@ import XCTest
 
 class SchoolRatingTests: XCTestCase {
 
+    var viewController: HomeViewControllerInteractor!
+    var flightsResponseModelMock: FlightsResponseModelMock!
+    var result: [FlightsResponseModel]?
+    var expectation: XCTestExpectation?
+    
     override func setUp() {
-        let vc = LoginViewController()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewController = HomeViewControllerInteractor(repository:  RepositoryMock())
+        viewController.delegate = self
+        flightsResponseModelMock = FlightsResponseModelMock()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
+    override func tearDown() {}
+    
+    func testFlights() {
+        expectation = self.expectation(description: "flights expectation")
+        viewController.getAllFlights()
+        wait(for: [expectation!], timeout: 5)
         
+        XCTAssertEqual(flightsResponseModelMock.flightsResponseModel, result)
+    }
+}
+
+extension SchoolRatingTests: FetchFlightsProtocol {
+    func listOf(fligths: [FlightsResponseModel]) {
+        self.result = fligths
+        expectation?.fulfill()
     }
 }

@@ -8,6 +8,20 @@
 
 import Foundation
 
+protocol DetailBinding: class {
+    func reloadUI(with data: FlightsResponseModel)
+}
+
 class DetailViewModel {
     
+    // MARK: - Properties
+    private let coordinator: CoordinatorProtocol
+    private let flightSelected: FlightsResponseModel
+    weak var view: DetailBinding? { didSet { self.view?.reloadUI(with: flightSelected) }}
+
+    // MARK: - Initializers
+    init(flightSelected: FlightsResponseModel, coordinator: CoordinatorProtocol) {
+        self.flightSelected = flightSelected
+        self.coordinator = coordinator
+    }
 }

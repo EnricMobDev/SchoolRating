@@ -9,38 +9,43 @@
 import UIKit
 
 protocol CoordinatorProtocol {
-    var childCoordinators: [CoordinatorProtocol] { get set }
-    var navigationController: UINavigationController { get set }
-    func showSignUpViewController()
     func showHomeViewController()
+    func showDetailViewController(flightSelected: FlightsResponseModel)
 }
 
 final class AppCoordinator: CoordinatorProtocol {
     
     // MARK: - Properties
-    var childCoordinators = [CoordinatorProtocol]()
-    var navigationController: UINavigationController
+    var navigationController = UINavigationController()
+    var window = UIWindow(frame: UIScreen.main.bounds)
     
     // MARK: - Initializers
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
+    init(){}
     
     // MARK: - Navigate Functions
-    func showSignUpViewController() {
-        let signUpViewModel = SignUpViewModel()
-        let signUpCoordinatorVC = SignUpViewController(viewModel: signUpViewModel)
-        signUpCoordinatorVC.coordinator = self
-        navigationController.pushViewController(signUpCoordinatorVC, animated: true)
+    func start() {
+        let initialViewController = showOnboardingViewController()
+        navigationController.pushViewController(initialViewController,
+                                                            animated: false)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+    }
+    
+    func showOnboardingViewController() -> UIViewController {
+        let onboardingAssembly = OnboardingAssembly(coordinator: self)
+        return onboardingAssembly.viewController()
     }
     
     func showHomeViewController() {
-        let apiClient = APIClient()
-        let repository = Repository(apiClient: apiClient)
-        let interactor = HomeViewControllerInteractor(repository: repository)
-        let homeViewModel = HomeViewModel(interactor: interactor)
-        let homeViewController = HomeViewController(viewModel: homeViewModel)
-        homeViewController.coordinator = self
+        let homeAssembly = HomeAssembly(coordinator: self)
+        let homeViewController = homeAssembly.viewController()
         navigationController.pushViewController(homeViewController, animated: true)
+    }
+    
+    func showDetailViewController(flightSelected: FlightsResponseModel) {
+        let detailViewModel = DetailViewModel(flightSelected: flightSelected, coordinator: self)
+        let detailViewController = DetailViewController(viewModel: detailViewModel)
+        detailViewController.coordinator = self
+        navigationController.pushViewController(detailViewController, animated: true)
     }
 }

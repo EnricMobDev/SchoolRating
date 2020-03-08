@@ -10,28 +10,25 @@ import Foundation
 
 final class APIClient {
     
-    func load(_ resource: Resource, result: @escaping ((Results<Data>) -> Void)) {
-        
+    func load(_ resource: Resource, result: @escaping ((Result<Data, APIClientError>) -> Void)) {
         let request = URLRequest(resource)
-        
-        let dataTask = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             
-            guard let `data` = data else {
+            guard let data = data else {
                 result(.failure(APIClientError.noData))
                 return
             }
-            if let `error` = error {
-                result(.failure(error))
+            if let _ = error {
+                result(.failure(.generic))
                 return
             }
             result(.success(data))
-        })
+        }
         dataTask.resume()
     }
 }
 
 extension URLRequest {
-    
     init(_ resource: Resource) {
         self.init(url: resource.url)
         self.httpMethod = resource.method

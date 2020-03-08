@@ -8,21 +8,19 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class OnboardingViewController: BaseViewController {
     
     // MARK: - Properties
-    private let viewModel: InitialViewModelProtocol
+    private let viewModel: OnboardingViewModel
   
     // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
     
     // MARK: - Initializers
-    init(viewModel: InitialViewModelProtocol) {
+    init(viewModel: OnboardingViewModel) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -31,13 +29,7 @@ class InitialViewController: UIViewController {
     }
     
     //MARK: - IBActions
-//    @IBAction func signUp(_ sender: Any) {
-//        viewModel.didSelect()
-//    }
-//    
-//    @IBAction func signIn(_ sender: Any) {
-//        viewModel.showFlights()
-//    }
-
-
+    @IBAction func chooseYourFlight(_ sender: Any) {
+        viewModel.showFlights()
+    }
 }

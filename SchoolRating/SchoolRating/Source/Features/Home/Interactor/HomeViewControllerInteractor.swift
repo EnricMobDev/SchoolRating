@@ -14,51 +14,55 @@ import UIKit
 
 protocol FetchFlightsProtocol: class {
     func listOf(fligths: [FlightsResponseModel])
-//    func getAllFlights() -> [FlightsResponseModel]
 }
 
-class HomeViewControllerInteractor {
+final class HomeViewControllerInteractor {
     
     // MARK: - Variables
-    var dolarExchange: Double?
-    var yenExchange: Double?
-    var poundExchange: Double?
+    private var dolarExchange: Double?
+    private var yenExchange: Double?
+    private var poundExchange: Double?
     weak var delegate: FetchFlightsProtocol?
     
     // MARK: - Constants
-    let dispatchGroup = DispatchGroup()
-    let repository: RepositoryProtocol
+    private let dispatchGroup = DispatchGroup()
+    private let repository: RepositoryProtocol
     
     init(repository: RepositoryProtocol) {
         self.repository = repository
     }
     
     func getAllFlights() {
-        fetchExchangesWith(url: Constants.Networking.Url.dolar_url)
-        fetchExchangesWith(url: Constants.Networking.Url.yen_url)
-        fetchExchangesWith(url: Constants.Networking.Url.pound_url)
+        fetchExchangesWith(endpoint: .dollar)
+        fetchExchangesWith(endpoint: .yen)
+        fetchExchangesWith(endpoint: .pound)
         
         fetchFlights()
     }
     
     // MARK: - Private funcs
-    private func fetchExchangesWith(url: String) {
+    private func fetchExchangesWith(endpoint: Endpoints) {
         
         dispatchGroup.enter()
-        repository.getCurrencyExchange(withUrl: url) { [weak self] (exchange, error) in
+        repository.fetch(endpoint: endpoint) { [weak self] (result: Result<CurrencyResponse, APIClientError>)   in
             
             guard let self = self else { return }
             
-            guard let acutalExchange = exchange?.exchangeRate else { return }
-            
-            if url.contains(Currency.usd.rawValue) {
-                self.dolarExchange = acutalExchange
-            }else if url.contains(Currency.jpy.rawValue) {
-                self.yenExchange = acutalExchange
-            }else if url.contains(Currency.gbp.rawValue) {
-                self.poundExchange = acutalExchange
+            switch result {
+            case let .success(currency):
+                switch endpoint {
+                case .dollar:
+                    self.dolarExchange = currency.exchangeRate
+                case .yen:
+                    self.yenExchange = currency.exchangeRate
+                case .pound:
+                     self.poundExchange = currency.exchangeRate
+                default:
+                    break
+                }
+            case .failure(_):
+                break
             }
-            
             self.dispatchGroup.leave()
         }
     }
@@ -66,50 +70,40 @@ class HomeViewControllerInteractor {
     private func fetchFlights() {
         dispatchGroup.notify(queue: .main) {
             
-            self.repository.getFlights { [weak self] (flights, error)  in
-
-                guard let self = self else { return }
-                
-                guard let flights = flights else { return }
-                let flightResponseModel = self.bindServiceResponseToOur(model: flights)
-                self.saveFligthsInToCache(flightResponseModel)
-                
-                self.delegate?.listOf(fligths: flightResponseModel)
+            self.repository.fetch(endpoint: .flights) { (result: Result<FlightsResponse, APIClientError>) in
+                switch result {
+                case let .success(flights):
+                    let flightResponseModel = self.bindServiceResponseToOur(model: flights)
+                    self.delegate?.listOf(fligths: flightResponseModel)
+                case .failure(_):
+                    break
+                }
             }
         }
     }
     
     private func bindServiceResponseToOur(model: FlightsResponse) -> [FlightsResponseModel] {
-        
-        var flightResponseModel: [FlightsResponseModel] = []
-        
-        for eachFligth in model.results {
-            
-            let currencyExchange = currencyExchangeWith(price: eachFligth.price, currency: eachFligth.currency.rawValue)
+        return model.flights.compactMap {
+            let currencyExchange = currencyExchangeWith(price: $0.price, currency: $0.currency.rawValue)
             let roundedPrice = rounded(price: currencyExchange)
             
-            let fligth = FlightsResponseModel(inboundArrivalDate: eachFligth.inbound.arrivalDate,
-                                              inboundArrivalTime: eachFligth.inbound.arrivalTime,
-                                              inboundDepartureDate: eachFligth.inbound.departureDate,
-                                              inboundDepartureTime: eachFligth.inbound.departureTime,
-                                              inboundDestination: eachFligth.inbound.destination.rawValue,
-                                              inboundOrigin: eachFligth.inbound.origin.rawValue,
-                                              outboundArrivalDate: eachFligth.outbound.arrivalDate,
-                                              outboundArrivalTime: eachFligth.outbound.arrivalTime,
-                                              outboundDepartureDate: eachFligth.outbound.departureDate,
-                                              outboundDepartureTime: eachFligth.outbound.departureTime,
-                                              outbounddDestination: eachFligth.outbound.destination.rawValue,
-                                              outboundOrigin: eachFligth.outbound.origin.rawValue,
+            return FlightsResponseModel(inboundArrivalDate: $0.inbound.arrivalDate,
+                                              inboundArrivalTime: $0.inbound.arrivalTime,
+                                              inboundDepartureDate: $0.inbound.departureDate,
+                                              inboundDepartureTime: $0.inbound.departureTime,
+                                              inboundDestination: $0.inbound.destination,
+                                              inboundOrigin: $0.inbound.origin,
+                                              outboundArrivalDate: $0.outbound.arrivalDate,
+                                              outboundArrivalTime: $0.outbound.arrivalTime,
+                                              outboundDepartureDate: $0.outbound.departureDate,
+                                              outboundDepartureTime: $0.outbound.departureTime,
+                                              outbounddDestination: $0.outbound.destination,
+                                              outboundOrigin: $0.outbound.origin,
                                               price: roundedPrice)
-            
-            flightResponseModel.append(fligth)
         }
-        
-        return flightResponseModel
     }
     
     private func currencyExchangeWith(price: Double, currency: String) -> Double {
-        
         var convertedPrice = 0.0
         
         switch currency {
@@ -135,9 +129,5 @@ class HomeViewControllerInteractor {
     
     private func rounded(price: Double) -> String {
         return String(format: Constants.formatWithTwoDecimals, price).replacingOccurrences(of: ".", with: ",")
-    }
-    
-    private func saveFligthsInToCache(_ flights: [FlightsResponseModel]) {
-        FlightResponseManagerCache.shared.save(flights: flights)
     }
 }
