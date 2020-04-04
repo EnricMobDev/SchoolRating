@@ -49,3 +49,4 @@ final class AppCoordinator: CoordinatorProtocol {
         navigationController.pushViewController(detailViewController, animated: true)
     }
 }
+
